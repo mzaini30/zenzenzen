@@ -1,0 +1,42 @@
+---
+import Disqus from "../include/disqus.astro";
+import Nama from "../data/nama";
+import Head from "../include/head.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter.judul}</title>
+  </head>
+  <body>
+    <a
+      href="/"
+      class="p-3 bg-black text-white font-bold uppercase sticky top-0 block"
+      >{Nama}</a
+    >
+    <div class="p-2 prose mx-auto konten py-6">
+      <h1>{frontmatter.judul}</h1>
+      <p><em>{frontmatter.ringkasan}</em></p>
+      <slot />
+    </div>
+    <a
+      href="/komunitas-id"
+      class="rounded px-4 py-2 bg-black text-white font-bold block w-min whitespace-nowrap mb-5 mx-auto"
+      >Join Komunitas</a
+    >
+    <!-- <div class="w-[65ch] max-w-[95%] mx-auto">
+      <Disqus slug={frontmatter.url} />
+    </div> -->
+  </body><style is:global>
+    .konten img {
+      @apply mx-auto block;
+    }
+  </style>
+</html>
