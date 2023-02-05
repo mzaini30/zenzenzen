@@ -28,6 +28,7 @@
     if (mengirim) {
       new Notification("Komentar berhasil dikirim");
       localStorage.dataKomentar = JSON.stringify({ nama, email });
+      komentarnya = "";
       dapatkanKomentar();
     }
   }
