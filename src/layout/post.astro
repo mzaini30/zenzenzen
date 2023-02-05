@@ -2,6 +2,7 @@
 import Disqus from "../include/disqus.astro";
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
+import Komentar from "../komponen/komentar.svelte";
 
 const { frontmatter } = Astro.props;
 ---
@@ -32,8 +33,8 @@ const { frontmatter } = Astro.props;
       >Join Komunitas</a
     >
     <!-- <a href="https://infak.id" class="px-4 py-2 rouded border-2 border-black font-bold block w-min mx-auto rounded mb-5">Sedekah</a> -->
-    <div class="w-[65ch] max-w-[95%] mx-auto">
-      <Disqus slug={frontmatter.url} />
+    <div class="w-[65ch] max-w-[95%] pb-6 mx-auto">
+      <Komentar client:only slug={frontmatter.url} />
     </div>
     <style is:global>
       .konten img {
