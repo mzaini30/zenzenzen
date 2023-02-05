@@ -26,10 +26,12 @@
       idnya: slug,
     });
     if (mengirim) {
-      new Notification("Komentar berhasil dikirim");
       localStorage.dataKomentar = JSON.stringify({ nama, email });
       komentarnya = "";
       dapatkanKomentar();
+      if (Notification.permission === "granted") {
+        new Notification("Komentar berhasil dikirim");
+      }
     }
   }
 
