@@ -47,7 +47,7 @@ const { frontmatter } = Astro.props;
         @apply max-w-full;
       }
     </style>
-    <script>
+    <script is:inline>
       const tombolCari = document.querySelector(".tombol-cari-post");
       tombolCari.addEventListener("click", () => {
         const input = prompt("Cari apa?");
