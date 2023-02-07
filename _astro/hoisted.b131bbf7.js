@@ -1,0 +1,1 @@
+import"./post.astro_astro_type_script_index_0_lang.59092d30.js";const t=document.querySelector(".tombol-cari");t.addEventListener("click",()=>{const o=prompt("Cari apa?");o&&(window.location.href=`/cari?${encodeURIComponent(o)}`)});
