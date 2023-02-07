@@ -1,6 +1,7 @@
 ---
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
+import Cari from "../icon/cari.astro";
 
 const tulisan = await Astro.glob("../pages/post/*.mdx");
 const { kategori } = Astro.props;
@@ -22,7 +23,7 @@ if (kategori) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <Head></Head>
+    <Head />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +32,18 @@ if (kategori) {
     </title>
   </head>
   <body>
-    <h1 class="p-3 font-bold uppercase">{Nama}</h1>
+    <div class="flex justify-between">
+      <div>
+        <a class="p-3 font-bold uppercase inline-block" href="/">{Nama}</a>
+      </div>
+      <div>
+        <div
+          class="p-3 -mt-1 pr-2 pb-0 inline-block cursor-pointer tombol-cari"
+        >
+          <Cari />
+        </div>
+      </div>
+    </div>
     <div class="p-2 flex gap-2 overflow-x-auto sticky top-0 bg-black">
       <a class="itemnya" href="/">all</a>
       {
@@ -57,11 +69,19 @@ if (kategori) {
         ))
       }
     </div>
+    <style>
+      .itemnya {
+        @apply text-sm  px-1  text-white font-bold;
+      }
+    </style>
+    <script>
+      const tombolCari = document.querySelector(".tombol-cari");
+      tombolCari.addEventListener("click", () => {
+        const input = prompt("Cari apa?");
+        if (input) {
+          window.location.href = `/cari?${encodeURIComponent(input)}`;
+        }
+      });
+    </script>
   </body>
 </html>
-
-<style>
-  .itemnya {
-    @apply text-sm  px-1  text-white font-bold;
-  }
-</style>

@@ -1,5 +1,5 @@
 ---
-import Disqus from "../include/disqus.astro";
+import Cari from "../icon/cari.astro";
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
 import Komentar from "../komponen/komentar.svelte";
@@ -17,11 +17,14 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.judul}</title>
   </head>
   <body>
-    <a
-      href="/"
-      class="p-3 bg-black text-white font-bold uppercase sticky top-0 block"
-      >{Nama}</a
+    <div
+      class="bg-black text-white font-bold uppercase flex justify-between sticky top-0"
     >
+      <a href="/" class="p-3 inline-block">{Nama}</a>
+      <div class="p-3 -mt-1 pr-2 pb-0 inline-block cursor-pointer tombol-cari">
+        <Cari />
+      </div>
+    </div>
     <div class="p-2 prose mx-auto konten py-6">
       <h1>{frontmatter.judul}</h1>
       <p><em>{frontmatter.ringkasan}</em></p>
@@ -44,5 +47,14 @@ const { frontmatter } = Astro.props;
         @apply max-w-full;
       }
     </style>
+    <script>
+      const tombolCari = document.querySelector(".tombol-cari");
+      tombolCari.addEventListener("click", () => {
+        const input = prompt("Cari apa?");
+        if (input) {
+          window.location.href = `/cari?${encodeURIComponent(input)}`;
+        }
+      });
+    </script>
   </body>
 </html>
