@@ -24,7 +24,8 @@
   <link rel="stylesheet" href="/_astro/cari.20fbeb03.css" />
 <link rel="stylesheet" href="/_astro/biaya-transaksi-crypto.b0e5f477.css" />
 <link rel="stylesheet" href="/_astro/index.d29f87b7.css" />
-<link rel="stylesheet" href="/_astro/index.8c489f50.css" /><script type="module" src="/_astro/hoisted.b131bbf7.js"></script></head>
+<link rel="stylesheet" href="/_astro/index.8c489f50.css" /><script type="module">const t=document.querySelector(".tombol-cari-post");t.addEventListener("click",()=>{const o=prompt("Cari apa?");o&&(window.location.href=`/cari?${encodeURIComponent(o)}`)});
+</script></head>
   <body class="astro-2X6XOAN2">
     <div class="flex justify-between astro-2X6XOAN2">
       <div class="astro-2X6XOAN2">
@@ -61,6 +62,14 @@
           </a>
     </div>
     
-    
+    <script>
+      const tombolCari = document.querySelector(".tombol-cari");
+      tombolCari.addEventListener("click", () => {
+        const input = prompt("Cari apa?");
+        if (input) {
+          window.location.href = `/cari?${encodeURIComponent(input)}`;
+        }
+      });
+    </script>
   </body>
 </html>
