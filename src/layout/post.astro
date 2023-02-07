@@ -21,7 +21,9 @@ const { frontmatter } = Astro.props;
       class="bg-black text-white font-bold uppercase flex justify-between sticky top-0"
     >
       <a href="/" class="p-3 inline-block">{Nama}</a>
-      <div class="p-3 -mt-1 pr-2 pb-0 inline-block cursor-pointer tombol-cari-post">
+      <div
+        class="p-3 -mt-1 pr-2 pb-0 inline-block cursor-pointer tombol-cari-post"
+      >
         <Cari />
       </div>
     </div>
@@ -35,7 +37,6 @@ const { frontmatter } = Astro.props;
       class="rounded px-4 py-2 bg-black text-white font-bold block w-min whitespace-nowrap mb-5 mx-auto"
       >Join Komunitas</a
     >
-    <!-- <a href="https://infak.id" class="px-4 py-2 rouded border-2 border-black font-bold block w-min mx-auto rounded mb-5">Sedekah</a> -->
     <div class="w-[65ch] max-w-[95%] pb-6 mx-auto">
       <Komentar client:only slug={frontmatter.url} />
     </div>

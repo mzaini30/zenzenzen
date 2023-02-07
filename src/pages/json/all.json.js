@@ -12,9 +12,7 @@ export async function get() {
         url: x.url,
         judul: x.frontmatter.judul,
         ringkasan: x.frontmatter.ringkasan,
-      })),
-      null,
-      2
+      }))
     ),
   };
 }
