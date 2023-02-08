@@ -10,6 +10,7 @@ specifiers:
   astro: ^2.0.6
   excalibur-zen: ^0.0.3
   gravatar: ^1.8.2
+  kunci: ^1.4.2
   prettier-plugin-astro: ^0.8.0
   svelte: ^3.54.0
   tailwindcss: ^3.0.24
@@ -27,6 +28,9 @@ dependencies:
   prettier-plugin-astro: 0.8.0
   svelte: 3.55.1
   tailwindcss: 3.2.4
+
+devDependencies:
+  kunci: 1.4.2
 
 packages:
 
@@ -2049,6 +2053,11 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
     dev: false
+
+  /kunci/1.4.2:
+    resolution: {integrity: sha512-BM4E3Wy70+AHMXkoyLbpx7v7CGYKi2B6qsxg0OQGzUuNErwDQvko8w0JsFONe3XR98NR/4nPGR3XzC2RRBhUzw==}
+    hasBin: true
+    dev: true
 
   /lilconfig/2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
