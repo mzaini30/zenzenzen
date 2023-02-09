@@ -5,6 +5,7 @@ import Head from "../include/head.astro";
 import Komentar from "../komponen/komentar.svelte";
 import { acak } from "kumpulan-tools";
 import { SEOMetadata } from "astro-seo-metadata";
+import Sidebar from "../komponen/sidebar.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -39,7 +40,7 @@ const gambarTerpilih = acak(gambarGambar)[0];
   </head>
   <body>
     <div
-      class="bg-black text-white font-bold uppercase flex justify-between sticky top-0"
+      class="bg-black text-white z-[100] font-bold uppercase flex justify-between sticky top-0"
     >
       <a href="/" class="p-3 inline-block">{Nama}</a>
       <div
@@ -48,22 +49,30 @@ const gambarTerpilih = acak(gambarGambar)[0];
         <Cari />
       </div>
     </div>
-    <div class="p-2 prose mx-auto konten py-6">
-      <h1>{frontmatter.judul}</h1>
-      <p><em>{frontmatter.ringkasan}</em></p>
-      <p><img src={gambarTerpilih.default} alt="" /></p>
-      <slot />
-    </div>
-    <a
-      href="/komunitas-id"
-      class="rounded px-4 py-2 bg-black text-white font-bold block w-min whitespace-nowrap mb-5 mx-auto"
-      >Join Komunitas</a
-    >
-    <div class="w-[65ch] max-w-[95%] pb-6 mx-auto">
-      <Komentar client:only slug={frontmatter.url} />
+    <div class="grid grid-cols-8 gap-2">
+      <div class="col-span-8 sm:col-span-6">
+        <div class="p-2 prose max-w-full konten py-6">
+          <h1>{frontmatter.judul}</h1>
+          <p><em>{frontmatter.ringkasan}</em></p>
+          <p><img src={gambarTerpilih.default} alt="" /></p>
+          <slot />
+        </div>
+        <a
+          href="/komunitas-id"
+          class="rounded px-4 py-2 bg-black text-white font-bold block w-min whitespace-nowrap mb-5 mx-auto"
+          >Join Komunitas</a
+        >
+        <div class="w-[65ch] max-w-[95%] pb-6 mx-auto">
+          <Komentar client:only slug={frontmatter.url} />
+        </div>
+      </div>
+      <div class="hidden sm:block col-span-2">
+        <Sidebar />
+      </div>
     </div>
     <style is:global>
-      .konten img {
+      .konten img,
+      .konten iframe {
         @apply mx-auto block;
       }
       .konten iframe {

@@ -4,6 +4,7 @@ import Head from "../include/head.astro";
 import Cari from "../icon/cari.astro";
 import { SEOMetadata } from "astro-seo-metadata";
 import { acak } from "kumpulan-tools";
+import Sidebar from "../komponen/sidebar.astro";
 
 // @ts-ignore
 let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
@@ -47,6 +48,7 @@ if (kategori) {
       type="website"
       astroGenerator={true}
     />
+    <meta property="og:url" content={Astro.url.toString()} />
     <Head />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -54,9 +56,9 @@ if (kategori) {
   </head>
   <body>
     <div class="flex justify-between">
-      <div>
+      <h1>
         <a class="p-3 font-bold uppercase inline-block" href="/">{Nama}</a>
-      </div>
+      </h1>
       <div>
         <div
           class="p-3 -mt-1 -mb-3 pr-2 inline-block cursor-pointer tombol-cari"
@@ -76,20 +78,28 @@ if (kategori) {
       }
     </div>
     {kategori && <p class="font-bold p-2 text-sm pb-0">Kategori {kategori}</p>}
-    <div class="p-2 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-      {
-        semuaTulisan.map((x) => (
-          <a
-            href={x.url}
-            class="border-2  border-black block p-2"
-            style="box-shadow: 2px 2px 0 0 black"
-          >
-            <h2 class="font-bold text-lg">{x.frontmatter.judul}</h2>
-            <p class="text-sm">{x.frontmatter.ringkasan}</p>
-          </a>
-        ))
-      }
+    <div class="grid grid-cols-9">
+      <div class="sm:col-span-7 col-span-9">
+        <div class="p-2 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+          {
+            semuaTulisan.map((x) => (
+              <a
+                href={x.url}
+                class="border-2  border-black block p-2"
+                style="box-shadow: 2px 2px 0 0 black"
+              >
+                <h2 class="font-bold text-lg">{x.frontmatter.judul}</h2>
+                <p class="text-sm">{x.frontmatter.ringkasan}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <div class="hidden sm:block col-span-2">
+        <Sidebar />
+      </div>
     </div>
+
     <style>
       .itemnya {
         @apply text-sm  px-1  text-white font-bold;
