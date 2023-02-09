@@ -3,18 +3,39 @@ import Cari from "../icon/cari.astro";
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
 import Komentar from "../komponen/komentar.svelte";
+import { acak } from "kumpulan-tools";
+import { SEOMetadata } from "astro-seo-metadata";
 
 const { frontmatter } = Astro.props;
+
+// @ts-ignore
+let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
+  eager: true,
+});
+gambarGambar = Object.values(gambarGambar);
+const gambarTerpilih = acak(gambarGambar)[0];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEOMetadata
+      siteName="Zen"
+      title={frontmatter.judul}
+      description={frontmatter.ringkasan}
+      image={gambarTerpilih.default}
+      favicon="/vite.svg"
+      author="Zen"
+      copyright="MIT"
+      astroSitemap={true}
+      canonicalUrl={Astro.url.toString()}
+      type="article"
+      astroGenerator={true}
+    />
     <Head />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{frontmatter.judul}</title>
   </head>
   <body>
     <div
@@ -30,6 +51,7 @@ const { frontmatter } = Astro.props;
     <div class="p-2 prose mx-auto konten py-6">
       <h1>{frontmatter.judul}</h1>
       <p><em>{frontmatter.ringkasan}</em></p>
+      <p><img src={gambarTerpilih.default} alt="" /></p>
       <slot />
     </div>
     <a
