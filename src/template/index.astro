@@ -2,6 +2,15 @@
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
 import Cari from "../icon/cari.astro";
+import { SEOMetadata } from "astro-seo-metadata";
+import { acak } from "kumpulan-tools";
+
+// @ts-ignore
+let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
+  eager: true,
+});
+gambarGambar = Object.values(gambarGambar);
+const gambarTerpilih = acak(gambarGambar)[0];
 
 const tulisan = await Astro.glob("../pages/post/*.mdx");
 const { kategori } = Astro.props;
@@ -23,13 +32,25 @@ if (kategori) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEOMetadata
+      siteName="Zen"
+      title={kategori ? `Kategori ${kategori}` : Nama}
+      description={kategori
+        ? `Berikut ini adalah konten-konten pada kategori ${kategori}`
+        : "Zen adalah blog yang dibuat dengan Astro"}
+      image={gambarTerpilih.default}
+      favicon="/vite.svg"
+      author="Zen"
+      copyright="MIT"
+      astroSitemap={true}
+      canonicalUrl={Astro.url.toString()}
+      type="website"
+      astroGenerator={true}
+    />
     <Head />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {kategori ? `Kategori ${kategori}` : Nama}
-    </title>
   </head>
   <body>
     <div class="flex justify-between">
