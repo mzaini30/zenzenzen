@@ -1,0 +1,40 @@
+---
+// @ts-ignore
+import pluang from "../gambar/pluang.jpeg";
+// @ts-ignore
+import domainesia from "../gambar/banner-3.svg";
+import excalibur from "excalibur-zen";
+import { url } from "gravatar";
+import { sql, komentar } from "../data/api";
+
+let komentarTerbaru = await excalibur(sql, {
+  id: komentar,
+  kunci: "komentarTerbaru",
+});
+komentarTerbaru = await komentarTerbaru.json();
+
+const { classnya } = Astro.props;
+---
+
+<div class={"p-2  " + classnya}>
+  <div class="sticky top-[60px]">
+    <h2 class="font-bold uppercase text-lg">Komentar Terbaru</h2>
+    <ol>
+      {
+        komentarTerbaru.map((x) => {
+          return (
+            <li>
+              <strong>{x.nama}</strong> : {x.komentar}
+            </li>
+          );
+        })
+      }
+    </ol>
+  </div>
+</div>
+
+<style>
+  img {
+    @apply block mx-auto;
+  }
+</style>

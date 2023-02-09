@@ -3,12 +3,14 @@
 import pluang from "../gambar/pluang.jpeg";
 // @ts-ignore
 import domainesia from "../gambar/banner-3.svg";
+
+const { classnya } = Astro.props;
 ---
 
-<div class="p-2 grid grid-cols-1 gap-2">
-  <img src={pluang} alt="" />
+<div class={"p-2  " + classnya}>
+  <img src={pluang} class="block mb-3" alt="Banner Pluang" />
 
-  <a class="sticky top-2" href="https://my.domainesia.com/ref.php?u=8297"
+  <a href="https://my.domainesia.com/ref.php?u=8297" class="sticky top-[60px]"
     ><img
       src={domainesia}
       width="160px"

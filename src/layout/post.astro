@@ -6,6 +6,7 @@ import Komentar from "../komponen/komentar.svelte";
 import { acak } from "kumpulan-tools";
 import { SEOMetadata } from "astro-seo-metadata";
 import Sidebar from "../komponen/sidebar.astro";
+import SidebarPostingan from "../komponen/sidebar-postingan.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -50,7 +51,8 @@ const gambarTerpilih = acak(gambarGambar)[0];
       </div>
     </div>
     <div class="grid grid-cols-8 gap-2">
-      <div class="col-span-8 sm:col-span-6">
+      <Sidebar classnya="hidden sm:block col-span-2" />
+      <div class="col-span-8 sm:col-span-4">
         <div class="p-2 prose max-w-full konten py-6">
           <h1>{frontmatter.judul}</h1>
           <p><em>{frontmatter.ringkasan}</em></p>
@@ -66,9 +68,7 @@ const gambarTerpilih = acak(gambarGambar)[0];
           <Komentar client:only slug={frontmatter.url} />
         </div>
       </div>
-      <div class="hidden sm:block col-span-2">
-        <Sidebar />
-      </div>
+      <SidebarPostingan classnya="hidden sm:block col-span-2" />
     </div>
     <style is:global>
       .konten img,
