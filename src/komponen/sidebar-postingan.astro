@@ -14,11 +14,35 @@ let komentarTerbaru = await excalibur(sql, {
 komentarTerbaru = await komentarTerbaru.json();
 
 const { classnya } = Astro.props;
+
+const blogroll = [
+  {
+    judul: "Kursi Rakyat",
+    link: "https://kursirakyat.com",
+  },
+];
 ---
 
 <div class={"p-2  " + classnya}>
+  <div class="mb-3">
+    <h2 class="judul">Blogroll</h2>
+    <ol>
+      {
+        blogroll.map((x) => {
+          return (
+            <li class="list-decimal ml-5 mb-2 last:mb-0">
+              <a class="underline" href={x.link}>
+                {x.judul}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </div>
+
   <div class="sticky top-[60px]">
-    <h2 class="font-bold uppercase text-lg">Komentar Terbaru</h2>
+    <h2 class="judul">Komentar Terbaru</h2>
     <ol>
       {
         komentarTerbaru.map((x) => {
@@ -36,5 +60,8 @@ const { classnya } = Astro.props;
 <style>
   img {
     @apply block mx-auto;
+  }
+  .judul {
+    @apply font-bold text-blue-500 uppercase text-lg;
   }
 </style>
