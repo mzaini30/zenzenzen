@@ -78,26 +78,19 @@ if (kategori) {
       }
     </div>
     {kategori && <p class="font-bold p-2 text-sm pb-0">Kategori {kategori}</p>}
-    <div class="grid grid-cols-9">
-      <div class="sm:col-span-7 col-span-9">
-        <div class="p-2 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-          {
-            semuaTulisan.map((x) => (
-              <a
-                href={x.url}
-                class="border-2  border-black block p-2"
-                style="box-shadow: 2px 2px 0 0 black"
-              >
-                <h2 class="font-bold text-lg">{x.frontmatter.judul}</h2>
-                <p class="text-sm">{x.frontmatter.ringkasan}</p>
-              </a>
-            ))
-          }
-        </div>
-      </div>
-      <div class="hidden sm:block col-span-2">
-        <Sidebar />
-      </div>
+    <div class="p-2 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+      {
+        semuaTulisan.map((x) => (
+          <a
+            href={x.url}
+            class="border-2  border-black block p-2"
+            style="box-shadow: 2px 2px 0 0 black"
+          >
+            <h2 class="font-bold text-lg">{x.frontmatter.judul}</h2>
+            <p class="text-sm">{x.frontmatter.ringkasan}</p>
+          </a>
+        ))
+      }
     </div>
 
     <style>
