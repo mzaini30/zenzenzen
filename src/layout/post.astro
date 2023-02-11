@@ -16,6 +16,14 @@ let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
 });
 gambarGambar = Object.values(gambarGambar);
 const gambarTerpilih = acak(gambarGambar)[0];
+
+const tulisan = await Astro.glob("../pages/post/*.mdx");
+
+let semuaKategori = [];
+for (let x of tulisan) {
+  semuaKategori.push(x.frontmatter.kategori);
+}
+semuaKategori = [...new Set(semuaKategori)].sort();
 ---
 
 <!DOCTYPE html>
@@ -40,15 +48,27 @@ const gambarTerpilih = acak(gambarGambar)[0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div
-      class="bg-black text-white z-[100] font-bold uppercase flex justify-between sticky top-0"
-    >
-      <a href="/" class="p-3 inline-block">{Nama}</a>
-      <div
-        class="p-3 -mt-1 pr-2 pb-0 inline-block cursor-pointer tombol-cari-post"
-      >
-        <Cari />
+    <div class="flex justify-between">
+      <h1>
+        <a class="p-3 font-bold uppercase inline-block" href="/">{Nama}</a>
+      </h1>
+      <div>
+        <div
+          class="p-3 -mt-1 -mb-3 pr-2 inline-block cursor-pointer tombol-cari"
+        >
+          <Cari />
+        </div>
       </div>
+    </div>
+    <div class="p-2 flex gap-2 overflow-x-auto sticky top-0 bg-black">
+      <a class="itemnya" href="/">all</a>
+      {
+        semuaKategori.map((x) => (
+          <a class="itemnya" href={`/kategori/${x}`}>
+            {x}
+          </a>
+        ))
+      }
     </div>
     <div class="grid grid-cols-8 gap-2">
       <Sidebar classnya="hidden sm:block col-span-2" />
@@ -77,6 +97,11 @@ const gambarTerpilih = acak(gambarGambar)[0];
       }
       .konten iframe {
         @apply max-w-full;
+      }
+    </style>
+    <style>
+      .itemnya {
+        @apply text-sm  px-1  text-white font-bold;
       }
     </style>
     <script is:inline>
