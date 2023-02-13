@@ -7,6 +7,13 @@ import excalibur from "excalibur-zen";
 import { url } from "gravatar";
 import { sql, komentar } from "../data/api";
 
+const tulisan = await Astro.glob("../pages/post/*.mdx");
+let semuaTulisan = [...tulisan]
+  .sort((a, b) =>
+    new Date(a.frontmatter.tanggal) < new Date(b.frontmatter.tanggal) ? 1 : -1
+  )
+  .splice(0, 5);
+
 let komentarTerbaru = await excalibur(sql, {
   id: komentar,
   kunci: "komentarTerbaru",
@@ -37,6 +44,21 @@ const blogroll = [
             </li>
           );
         })
+      }
+    </ol>
+  </div>
+
+  <div class="mb-3">
+    <h2 class="judul">Tulisan Terbaru</h2>
+    <ol>
+      {
+        semuaTulisan.map((x) => (
+          <li class="list-decimal ml-5 mb-2 last:mb-0">
+            <a href={x.url} class="underline">
+              {x.frontmatter.judul}
+            </a>
+          </li>
+        ))
       }
     </ol>
   </div>
