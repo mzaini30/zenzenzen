@@ -49,21 +49,6 @@ const blogroll = [
   </div>
 
   <div class="mb-3">
-    <h2 class="judul">Tulisan Terbaru</h2>
-    <ol>
-      {
-        semuaTulisan.map((x) => (
-          <li class="list-decimal ml-5 mb-2 last:mb-0">
-            <a href={x.url} class="underline">
-              {x.frontmatter.judul}
-            </a>
-          </li>
-        ))
-      }
-    </ol>
-  </div>
-
-  <div class="sticky top-[60px]">
     <h2 class="judul">Komentar Terbaru</h2>
     <ol>
       {
@@ -74,6 +59,21 @@ const blogroll = [
             </li>
           );
         })
+      }
+    </ol>
+  </div>
+
+  <div class="sticky top-[60px]">
+    <h2 class="judul">Tulisan Terbaru</h2>
+    <ol>
+      {
+        semuaTulisan.map((x) => (
+          <li class="list-decimal ml-5 mb-2 last:mb-0">
+            <a href={x.url} class="underline">
+              {x.frontmatter.judul}
+            </a>
+          </li>
+        ))
       }
     </ol>
   </div>
