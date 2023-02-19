@@ -56,17 +56,11 @@
 </script>
 
 {#if hasil}
-  <p class="font-bold p-2 pb-0 uppercase text-sm">Hasil cari {yangDicari}</p>
-  <div class="p-2 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-    {#each hasil as x}
-      <a
-        href={x.url}
-        class="border-2  border-black block p-2"
-        style="box-shadow: 2px 2px 0 0 black"
-      >
-        <h2 class="font-bold text-lg">{x.judul}</h2>
-        <p class="text-sm">{x.ringkasan}</p>
-      </a>
-    {/each}
-  </div>
+  <p class="mb-2 rounded p-2 shadow bg-white">Hasil cari {yangDicari}</p>
+  {#each hasil as x}
+    <a href={x.url} class="rounded p-2 bg-white block shadow mb-2 last:mb-0">
+      <h2 class="font-bold uppercaseeee">{x.judul}</h2>
+      <p class="text-sm">{x.ringkasan}</p>
+    </a>
+  {/each}
 {/if}

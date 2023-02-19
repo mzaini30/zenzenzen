@@ -6,6 +6,7 @@ import domainesia from "../gambar/banner-3.svg";
 import excalibur from "excalibur-zen";
 import { url } from "gravatar";
 import { sql, komentar } from "../data/api";
+import { acak } from "kumpulan-tools";
 
 const tulisan = await Astro.glob("../pages/post/*.mdx");
 let semuaTulisan = [...tulisan]
@@ -14,11 +15,14 @@ let semuaTulisan = [...tulisan]
   )
   .splice(0, 5);
 
-let komentarTerbaru = await excalibur(sql, {
-  id: komentar,
-  kunci: "komentarTerbaru",
-});
-komentarTerbaru = await komentarTerbaru.json();
+let tulisanAcak = [...tulisan];
+tulisanAcak = acak(tulisan).splice(0, 5);
+
+// let komentarTerbaru = await excalibur(sql, {
+//   id: komentar,
+//   kunci: "komentarTerbaru",
+// });
+// komentarTerbaru = await komentarTerbaru.json();
 
 const { classnya } = Astro.props;
 
@@ -30,53 +34,66 @@ const blogroll = [
 ];
 ---
 
-<div class={"p-2  " + classnya}>
-  <div class="mb-3">
-    <h2 class="judul">Blogroll</h2>
-    <ol>
-      {
-        blogroll.map((x) => {
-          return (
-            <li class="list-decimal ml-5 mb-2 last:mb-0">
-              <a class="underline" href={x.link}>
-                {x.judul}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ol>
-  </div>
-
-  <div class="mb-3">
-    <h2 class="judul">Komentar Terbaru</h2>
-    <ol>
-      {
-        komentarTerbaru.map((x) => {
-          return (
-            <li>
-              <strong>{x.nama}</strong> : {x.komentar}
-            </li>
-          );
-        })
-      }
-    </ol>
-  </div>
-
-  <div class="sticky top-[60px]">
-    <h2 class="judul">Tulisan Terbaru</h2>
-    <ol>
-      {
-        semuaTulisan.map((x) => (
+<div class="p-2">
+  <h2 class="font-bold uppercase mb-1">Blogroll</h2>
+  <ol>
+    {
+      blogroll.map((x) => {
+        return (
           <li class="list-decimal ml-5 mb-2 last:mb-0">
-            <a href={x.url} class="underline">
-              {x.frontmatter.judul}
+            <a class="underline" rel="nofollow" href={x.link}>
+              {x.judul}
             </a>
           </li>
-        ))
-      }
-    </ol>
-  </div>
+        );
+      })
+    }
+  </ol>
+</div>
+
+<!-- <div class="p-2">
+  <h2 class="font-bold uppercase mb-1">Komentar Terbaru</h2>
+  <ol>
+    {
+      komentarTerbaru.map((x) => {
+        return (
+          <li>
+            <strong>{x.nama}</strong> : {x.komentar}
+          </li>
+        );
+      })
+    }
+  </ol>
+</div> -->
+
+<div class="p-2">
+  <h2 class="font-bold uppercase mb-1">Tulisan Terbaru</h2>
+  <ol>
+    {
+      semuaTulisan.map((x) => (
+        <li class="list-decimal ml-5 mb-2 last:mb-0">
+          <a href={x.url} class="underline">
+            {x.frontmatter.judul}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<div class="p-2">
+  <h2 class="font-bold uppercase mb-1">Tulisan Acak</h2>
+  <ol>
+    {
+      tulisanAcak.map((x) => (
+        <li class="list-decimal ml-5 mb-2 last:mb-0">
+          <a href={x.url} class="underline">
+            {x.frontmatter.judul}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
 </div>
 
 <style>

@@ -47,7 +47,7 @@
   dapatkanKomentar();
 </script>
 
-<div class="rounded text-sm border border-gray-500 shadow">
+<div class="rounded text-sm border border-gray-500 shadow bg-white">
   <div class="judul bg-gray-500 text-white p-2">Tambahkan Komentar Baru</div>
   <div class="isi p-2">
     <form
@@ -83,7 +83,7 @@
 {#if dataKomentar}
   {#each dataKomentar as komentar}
     <!-- get list of commentar using gravatar as profile picture -->
-    <div class="rounded text-sm border border-gray-500 shadow mt-2">
+    <div class="rounded text-sm border border-gray-500 bg-white shadow mt-2">
       <div class="judul bg-gray-500 text-white p-2">
         <img
           src={url(komentar.email)}

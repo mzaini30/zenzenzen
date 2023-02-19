@@ -7,18 +7,16 @@ import domainesia from "../gambar/banner-3.svg";
 const { classnya } = Astro.props;
 ---
 
-<div class={"p-2  " + classnya}>
-  <img src={pluang} class="block mb-3" alt="Banner Pluang" />
+<img src={pluang} alt="Banner Pluang" width="500" height="896" />
 
-  <a href="https://my.domainesia.com/ref.php?u=8297" class="sticky top-[60px]"
-    ><img
-      src={domainesia}
-      width="160px"
-      height="600px"
-      alt="www.domainesia.com"
-    /></a
-  >
-</div>
+<a href="https://my.domainesia.com/ref.php?u=8297" rel="nofollow"
+  ><img
+    src={domainesia}
+    width="160px"
+    height="600px"
+    alt="www.domainesia.com"
+  /></a
+>
 
 <style>
   img {

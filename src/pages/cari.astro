@@ -3,9 +3,14 @@ import Cari from "../icon/cari.astro";
 import Nama from "../data/nama";
 import Head from "../include/head.astro";
 import KomponenCari from "../komponen/cari.svelte";
+import DesainBaru from "../template/desain-baru.astro";
 ---
 
-<!DOCTYPE html>
+<DesainBaru judul="Hasil Pencarian" deskripsi="Halaman pencarian">
+  <KomponenCari client:only />
+</DesainBaru>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <Head />
@@ -36,4 +41,4 @@ import KomponenCari from "../komponen/cari.svelte";
       });
     </script>
   </body>
-</html>
+</html> -->

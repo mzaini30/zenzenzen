@@ -7,6 +7,7 @@ import { acak } from "kumpulan-tools";
 import { SEOMetadata } from "astro-seo-metadata";
 import Sidebar from "../komponen/sidebar.astro";
 import SidebarPostingan from "../komponen/sidebar-postingan.astro";
+import DesainBaru from "../template/desain-baru.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -26,7 +27,39 @@ for (let x of tulisan) {
 semuaKategori = [...new Set(semuaKategori)].sort();
 ---
 
-<!DOCTYPE html>
+<DesainBaru judul={frontmatter.judul} tanggal={frontmatter.tanggal} deskripsi={frontmatter.ringkasan}>
+  <div class="p-2 prose max-w-full konten py-6 bg-white rounded shadow mb-2">
+    <h1>{frontmatter.judul}</h1>
+    <p><em>{frontmatter.ringkasan}</em></p>
+    <p><img src={gambarTerpilih.default} alt="" /></p>
+    <slot />
+  </div>
+  <a
+    href="/komunitas"
+    class="rounded px-4 py-2 bg-white border-black border-2 tombol font-bold block w-min whitespace-nowrap mb-2 mx-auto"
+    >Join Komunitas</a
+  >
+  <div class="w-[65ch] max-w-[95%] pb-6 mx-auto">
+    <Komentar client:only slug={frontmatter.url} />
+  </div>
+</DesainBaru>
+
+<style is:global>
+  .konten img,
+  .konten iframe {
+    @apply mx-auto block;
+  }
+  .konten iframe {
+    @apply max-w-full;
+  }
+</style>
+<style>
+  .tombol {
+    box-shadow: 5px 5px 0 0 black;
+  }
+</style>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <SEOMetadata
@@ -114,4 +147,4 @@ semuaKategori = [...new Set(semuaKategori)].sort();
       });
     </script>
   </body>
-</html>
+</html> -->
