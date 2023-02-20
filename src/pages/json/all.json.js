@@ -5,7 +5,7 @@ export async function get() {
   const semuaPostinganArray = Object.values(semuaPostingan);
   const semuaPostinganArrayUrut = semuaPostinganArray.sort(
     (a, b) => b.frontmatter.tanggal - a.frontmatter.tanggal
-  );
+  )
   return {
     body: JSON.stringify(
       semuaPostinganArrayUrut.map((x) => ({
