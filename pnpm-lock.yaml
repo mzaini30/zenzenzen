@@ -7,8 +7,10 @@ specifiers:
   '@astrojs/svelte': ^2.0.1
   '@astrojs/tailwind': ^3.0.0
   '@tailwindcss/typography': ^0.5.9
+  andro: ^2.2.6
   astro: ^2.0.6
   astro-seo-metadata: ^0.5.5
+  degit: ^2.8.4
   excalibur-zen: ^0.0.3
   gravatar: ^1.8.2
   kumpulan-tools: ^1.0.0
@@ -24,8 +26,10 @@ dependencies:
   '@astrojs/svelte': 2.0.1_astro@2.0.6+svelte@3.55.1
   '@astrojs/tailwind': 3.0.0_jiulpwjund37q6yckwlgwo54mu
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
+  andro: 2.2.6
   astro: 2.0.6
   astro-seo-metadata: 0.5.5
+  degit: 2.8.4
   excalibur-zen: 0.0.3
   gravatar: 1.8.2
   kumpulan-tools: 1.0.0
@@ -979,6 +983,14 @@ packages:
     hasBin: true
     dev: false
 
+  /andro/2.2.6:
+    resolution: {integrity: sha512-kSYQs3PqqRj/04EBRfQ5g+d9Yyi6KfWnMo/rKc9eDirUvCTuhSdSBPbiSM7MyUgCc8MgTwGe70pQrOXuF6/oRw==}
+    hasBin: true
+    dependencies:
+      degit: 2.8.4
+      zx: 7.1.1
+    dev: false
+
   /ansi-align/3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
     dependencies:
@@ -1428,6 +1440,12 @@ packages:
 
   /defined/1.0.1:
     resolution: {integrity: sha512-hsBd2qSVCRE+5PmNdHt1uzyrFu5d3RwmFDKzyNZMFq/EwDNJF7Ee5+D5oEKF0hU6LhtoUF1macFvOe4AskQC1Q==}
+    dev: false
+
+  /degit/2.8.4:
+    resolution: {integrity: sha512-vqYuzmSA5I50J882jd+AbAhQtgK6bdKUJIex1JNfEUPENCgYsxugzKVZlFyMwV4i06MmnV47/Iqi5Io86zf3Ng==}
+    engines: {node: '>=8.0.0'}
+    hasBin: true
     dev: false
 
   /dequal/2.0.3:
