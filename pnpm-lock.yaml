@@ -12,7 +12,7 @@ specifiers:
   excalibur-zen: ^0.0.3
   gravatar: ^1.8.2
   kumpulan-tools: ^1.0.0
-  kunci: ^1.5.1
+  kunci: ^1.5.2
   prettier-plugin-astro: ^0.8.0
   svelte: ^3.54.0
   tailwindcss: ^3.0.24
@@ -29,7 +29,7 @@ dependencies:
   excalibur-zen: 0.0.3
   gravatar: 1.8.2
   kumpulan-tools: 1.0.0
-  kunci: 1.5.1
+  kunci: 1.5.2
   prettier-plugin-astro: 0.8.0
   svelte: 3.55.1
   tailwindcss: 3.2.4
@@ -2176,8 +2176,8 @@ packages:
     resolution: {integrity: sha512-8RzuLboxhTjMBjp7TbnqOnDYmV4ZATGZof37ccgREsEcg0O6ywc+nC9yyKhRKpx8jyo3+gVWusfAdN287IxoaA==}
     dev: false
 
-  /kunci/1.5.1:
-    resolution: {integrity: sha512-NhUAVVMvlMktYveOWs4i7FECQkB/BHldn2Tp1+tbeTbCHmS1fQvHcMwit/R0TbnzYq3LpUQP0FZplwDiCkqNpA==}
+  /kunci/1.5.2:
+    resolution: {integrity: sha512-9BhSlArIXRtB9/e1Mnyb3v/3m3bIA3ApsQR1kaAacfBpUPODzQP+qIetbTtR8+oxwyQTTZM3aB7nT7Rm/pbZVQ==}
     hasBin: true
     dependencies:
       crypto-zen: 1.0.2
