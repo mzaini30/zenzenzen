@@ -15,10 +15,16 @@ const { frontmatter } = Astro.props;
 let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
   eager: true,
 });
+// @ts-ignore
 gambarGambar = Object.values(gambarGambar);
 const gambarTerpilih = acak(gambarGambar)[0];
 
 const tulisan = await Astro.glob("../pages/post/*.mdx");
+
+let relatedPosts = [...tulisan]
+  .filter((x) => x.frontmatter.kategori == frontmatter.kategori)
+  .filter((x) => x.frontmatter.judul != frontmatter.judul)
+  .sort((a, b) => (a.frontmatter.judul > b.frontmatter.judul ? 1 : -1));
 
 let semuaKategori = [];
 for (let x of tulisan) {
@@ -27,12 +33,30 @@ for (let x of tulisan) {
 semuaKategori = [...new Set(semuaKategori)].sort();
 ---
 
-<DesainBaru judul={frontmatter.judul} tanggal={frontmatter.tanggal} deskripsi={frontmatter.ringkasan}>
+<DesainBaru
+  judul={frontmatter.judul}
+  tanggal={frontmatter.tanggal}
+  deskripsi={frontmatter.ringkasan}
+>
   <div class="p-2 prose max-w-full konten py-6 bg-white rounded shadow mb-2">
     <h1>{frontmatter.judul}</h1>
     <p><em>{frontmatter.ringkasan}</em></p>
     <p><img src={gambarTerpilih.default} alt="" /></p>
     <slot />
+    {
+      relatedPosts.length > 0 && (
+        <>
+          <h2>Tulisan Lainnya</h2>
+          <ol>
+            {relatedPosts.map((x) => (
+              <li>
+                <a href={x.url}>{x.frontmatter.judul}</a>
+              </li>
+            ))}
+          </ol>
+        </>
+      )
+    }
   </div>
   <a
     href="/komunitas"
@@ -50,7 +74,7 @@ semuaKategori = [...new Set(semuaKategori)].sort();
     @apply mx-auto block;
   }
   .konten img {
-    @apply rounded border overflow-hidden
+    @apply rounded border overflow-hidden;
   }
   .konten iframe {
     @apply max-w-full;
