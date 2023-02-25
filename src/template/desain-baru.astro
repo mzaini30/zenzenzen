@@ -3,12 +3,14 @@ import SidebarKiri from "../komponen/sidebar.astro";
 import SidebarKanan from "../komponen/sidebar-postingan.astro";
 import { SEOMetadata } from "astro-seo-metadata";
 import { acak } from "kumpulan-tools";
+import Head from "../include/head.astro";
 
 const { judul, deskripsi, isBeranda, tanggal } = Astro.props;
 
 let gambarGambar = import.meta.glob("../wallpaper/*.jpg", {
   eager: true,
 });
+// @ts-ignore
 gambarGambar = Object.values(gambarGambar);
 const gambarTerpilih = acak(gambarGambar)[0].default;
 
@@ -24,8 +26,7 @@ semuaKategori = ["beranda", ...semuaKategori];
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149"
-     crossorigin="anonymous"></script>
+    <Head />
     <meta
       name="robots"
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
