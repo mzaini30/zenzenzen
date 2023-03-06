@@ -14,7 +14,7 @@ const template = `---
 judul: "${judul}"
 layout: "../../layout/post.astro"
 ringkasan: ""
-kategori: ""
+kategori: "new-post"
 tanggal: "${tanggal}"
 gambar: ""
 ---
