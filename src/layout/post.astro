@@ -41,7 +41,7 @@ semuaKategori = [...new Set(semuaKategori)].sort();
   <div class="p-2 prose max-w-full konten py-6 bg-white rounded shadow mb-2">
     <h1>{frontmatter.judul}</h1>
     <p><em>{frontmatter.ringkasan}</em></p>
-    <p><img src={gambarTerpilih.default} alt="" /></p>
+    <p><img src={frontmatter.gambar || gambarTerpilih.default} alt="" /></p>
     <slot />
     {
       relatedPosts.length > 0 && (
