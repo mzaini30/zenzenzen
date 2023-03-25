@@ -24,7 +24,9 @@
   <Header />
   <div class="py-7">
     <div class="grid grid-cols-4 gap-7 w-270 max-w-[95%] mx-auto">
-      <div class="col-span-4 sm:col-span-3 prose max-w-full">
+      <div
+        class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full prose max-w-full"
+      >
         <CardBesar {judul} {gambar} />
         <slot />
         <Komentar {slug} />
