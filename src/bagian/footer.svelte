@@ -1,0 +1,3 @@
+<div class="w-full p-3 text-sm bg-red-500 text-white text-center">
+  Aku harap, kamu suka dengan blog ini...
+</div>

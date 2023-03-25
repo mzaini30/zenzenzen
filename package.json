@@ -1,43 +1,31 @@
 {
-  "name": "zen-blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "blog-baru-pakai-svelte",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mzaini30/zen-blog.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mzaini30/zen-blog/issues"
-  },
-  "homepage": "https://github.com/mzaini30/zen-blog#readme",
-  "dependencies": {
-    "@astrojs/mdx": "^0.15.1",
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/svelte": "^2.0.1",
-    "@astrojs/tailwind": "^3.0.0",
-    "@stylify/astro": "^0.5.27",
-    "@stylify/unplugin": "^0.5.27",
-    "@tailwindcss/typography": "^0.5.9",
-    "andro": "^2.2.6",
-    "astro": "^2.0.6",
-    "astro-seo-metadata": "^0.5.5",
-    "degit": "^2.8.4",
-    "excalibur-zen": "^0.0.3",
-    "gravatar": "^1.8.2",
-    "input": "^1.0.1",
-    "kumpulan-tools": "^1.0.0",
-    "kunci": "^1.5.2",
-    "prettier-plugin-astro": "^0.8.0",
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.5.0",
+    "@unocss/preset-typography": "^0.50.6",
+    "mdsvex": "^0.10.6",
     "svelte": "^3.54.0",
-    "tailwindcss": "^3.0.24"
+    "vite": "^4.2.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/adapter-static": "^2.0.1",
+    "@unocss/reset": "^0.50.6",
+    "excalibur-zen": "^0.0.3",
+    "five-server": "^0.1.9",
+    "glob": "^9.3.1",
+    "gravatar": "^1.8.2",
+    "kumpulan-tools": "^1.0.0",
+    "svelte-meta-tags": "^2.7.0",
+    "unocss": "^0.50.6",
+    "vite-plugin-svelte-inspector": "^0.2.1"
   }
 }
