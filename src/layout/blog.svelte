@@ -9,6 +9,7 @@
   import { MetaTags } from "svelte-meta-tags";
   import gambar_default from "../fungsi/gambar-default";
   import CardBesar from "../card/besar.svelte";
+  import "../style/prism.css";
 
   export let judul, ringkasan, gambar;
 
