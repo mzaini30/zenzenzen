@@ -20,7 +20,7 @@
     alt="Gambar {judul}"
   />
   <div
-    class="w-full object-cover rounded-lg text-2xl p-4 aspect-video bg-green-500/70 absolute top-0 grid grid-cols-1 gap-5 content-between"
+    class="w-full object-cover rounded-lg text-2xl p-4 aspect-video bg-gradient-to-t from-black/50 absolute top-0 grid grid-cols-1 gap-5 content-between"
   >
     <div />
     <div class="text-white">{judul}</div>

@@ -32,7 +32,7 @@
   <div class="mx-auto w-270 grid grid-cols-2">
     <a href={link}>
       <img
-        class="w-full h-auto"
+        class="w-full aspect-video object-cover"
         src={nilai.gambar || gambar_default}
         alt="Gambar {nilai.judul}"
       />
