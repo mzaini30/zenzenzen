@@ -45,7 +45,7 @@
     >
       <KumpulanList kategori="psikologi" />
       <KumpulanList kategori="dakwah" />
-      <KumpulanList kategori="renungan" />
+      <KumpulanList kategori="pemrograman" />
     </div>
   </div>
   <Footer />
