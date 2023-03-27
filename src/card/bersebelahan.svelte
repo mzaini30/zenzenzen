@@ -12,6 +12,8 @@
     src={gambar || gambar_default}
     class="w-25 rounded aspect-square object-cover"
     alt="Gambar {judul}"
+    width="640"
+    height="427"
   />
   <div>{judul}</div>
 </a>

@@ -35,6 +35,8 @@
       src={iklan}
       alt="Iklan dulu ya"
       class="w-full aspect-video object-cover rounded"
+      width="460"
+      height="280"
     />
   </a>
 </div>

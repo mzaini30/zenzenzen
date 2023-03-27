@@ -17,7 +17,7 @@
   class="bg-red-500 w-full z-999 text-white py-3 sticky top-0 hover:[&_a]:text-black"
 >
   <div class="mx-auto w-270 max-w-[95%] flex justify-between">
-    <a href="/">Zen Zen</a>
+    <h1><a href="/">Zen Zen</a></h1>
     <div class="sm:flex gap-3 hidden">
       {#each semua_kategori as kategori}
         <a href="/kategori/{kategori}">{kategori}</a>

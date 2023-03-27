@@ -13,6 +13,8 @@
       src={gambar || gambar_default}
       class="w-full rounded aspect-video object-cover"
       alt="Gambar {judul}"
+      width="640"
+      height="427"
     />
   </a>
   <div>

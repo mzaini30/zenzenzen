@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex justify-between items-center">
-  <div class="text-3xl font-bold text-red-500 capitalize">{teks}</div>
+  <h2 class="text-3xl font-bold text-red-500 capitalize">{teks}</h2>
   {#if link_selengkapnya}
     <div>
       <a
