@@ -36,7 +36,7 @@
     <div
       class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 w-270 max-w-[95%] mx-auto"
     >
-      <KumpulanList kategori="psikologi" />
+      <KumpulanList kategori="pemrograman" />
       <KumpulanList kategori="dakwah" />
       <KumpulanList kategori="seo" />
     </div>
