@@ -9,9 +9,6 @@
   <a href="https://wa.me/6281545143654">
     <img src={iklan} alt="Pasang iklan" />
   </a>
-  <div>
-    <KumpulanList kategori="marketing" />
-  </div>
   <a href="https://brtnetwork.id"
     ><img
       src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"

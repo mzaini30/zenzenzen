@@ -5,5 +5,4 @@
 </script>
 
 <Head />
-
 <slot />

@@ -30,7 +30,7 @@
     <div
       class="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 max-w-[95%] w-270 mx-auto"
     >
-      <KumpulanCard kategori="crypto" />
+      <KumpulanCard kategori="psikologi" />
       <KumpulanCard kategori="keuangan" />
     </div>
     <div
@@ -38,7 +38,7 @@
     >
       <KumpulanList kategori="psikologi" />
       <KumpulanList kategori="dakwah" />
-      <KumpulanList kategori="renungan" />
+      <KumpulanList kategori="seo" />
     </div>
   </div>
   <Footer />
