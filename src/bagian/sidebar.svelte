@@ -1,6 +1,7 @@
 <script>
   import iklan from "../gambar/your_ad_here_banner.jpg";
   import KumpulanList from "./kumpulan-list.svelte";
+  import pluang from "../gambar/pluang.jpg";
 </script>
 
 <div
@@ -9,6 +10,7 @@
   <a href="https://wa.me/6281545143654">
     <img src={iklan} alt="Pasang iklan" width="460" height="280" />
   </a>
+  <img src={pluang} alt="Kode referal Pluang" />
   <a href="https://brtnetwork.id"
     ><img
       src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"
