@@ -22,6 +22,13 @@ export async function GET() {
 		<loc>${x[0]
       .replace("../routes/", "https://zenzen.web.id/")
       .replace("/+page.mdx", "")}</loc>
+      <lastmod>${x[1].metadata.tanggal}</lastmod>
+      <image:image>
+			  <image:loc>${
+          x[1].metadata.gambar.replace(/^\//, "https://zenzen.web.id/") ||
+          gambar_default
+        }</image:loc>
+		</image:image>
 	</url>`
         )}
       </urlset>`.trim(),
