@@ -34,9 +34,10 @@
     <img
       src={iklan}
       alt="Iklan dulu ya"
+      title="Iklan dulu ya"
       class="w-full aspect-video object-cover rounded"
       width="460"
-      height="280"
+      height="280" loading="lazy"
     />
   </a>
 </div>

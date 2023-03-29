@@ -9,14 +9,19 @@
   import Cetak from "../../fungsi/cetak.svelte";
   import olah_link from "../../fungsi/olah-link";
   import { MetaTags } from "svelte-meta-tags";
+  import Sosial from "../../bagian/meta-sosial.svelte";
 
   let tulisannya = Object.entries(semua_tulisan);
+
+  const judul = "Semua Postingan";
+  const deskripsi = "Semua postingan di blog ini, ada di sini";
 </script>
 
-<MetaTags
-  title="Semua Postingan"
-  description="Semua postingan di blog ini, ada di sini"
-/>
+<svelte:head>
+  <Sosial {judul} {deskripsi} />
+</svelte:head>
+
+<MetaTags title={judul} description={deskripsi} />
 
 <Base>
   <Header />
@@ -24,13 +29,13 @@
     <div class="grid grid-cols-4 gap-7 max-w-[95%] w-270 mx-auto">
       <div class="col-span-4 sm:col-span-3 ">
         <div class="mb-5">
-          <JudulSegmen teks="Semua Postingan" />
+          <JudulSegmen tag="h1" teks="Semua Postingan" />
         </div>
         {#each tulisannya as [key, value]}
           <div class="mb-5">
-            <h1 class="text-2xl font-bold">
+            <p class="text-2xl font-bold">
               <a href={olah_link(key)}>{value.metadata.judul}</a>
-            </h1>
+            </p>
             <p class="text-sm text-gray-500">{value.metadata.ringkasan}</p>
             <p class="text-sm text-gray-500">
               <a class="underline" href="/kategori/{value.metadata.kategori}"

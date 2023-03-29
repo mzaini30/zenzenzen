@@ -35,8 +35,10 @@
         class="w-full aspect-video object-cover"
         src={nilai.gambar || gambar_default}
         alt="Gambar {nilai.judul}"
+        title="Gambar {nilai.judul}"
         width="640"
         height="427"
+        loading="lazy"
       />
     </a>
     <div class="p-5 flex items-center">

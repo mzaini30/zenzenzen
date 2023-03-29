@@ -1,10 +1,14 @@
 <script>
   export let link_selengkapnya;
   export let teks;
+  export let tag;
 </script>
 
 <div class="flex justify-between items-center">
-  <h2 class="text-3xl font-bold text-red-500 capitalize">{teks}</h2>
+  <svelte:element
+    this={tag || "h2"}
+    class="text-3xl font-bold text-red-500 capitalize">{teks}</svelte:element
+  >
   {#if link_selengkapnya}
     <div>
       <a

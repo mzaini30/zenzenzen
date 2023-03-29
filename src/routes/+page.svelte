@@ -8,12 +8,18 @@
   import Sidebar from "../bagian/sidebar.svelte";
   import Footer from "../bagian/footer.svelte";
   import { MetaTags } from "svelte-meta-tags";
+  import Sosial from "../bagian/meta-sosial.svelte";
+
+  const judul = "Zen Zen";
+  const deskripsi =
+    "Kumpulan tulisan tentang pemrograman, investasi, dan crypto";
 </script>
 
-<MetaTags
-  title="Zen Zen"
-  description="Kumpulan tulisan tentang pemrograman, investasi, dan crypto"
-/>
+<MetaTags title={judul} description={deskripsi} />
+
+<svelte:head>
+  <Sosial {judul} {deskripsi} />
+</svelte:head>
 
 <Base>
   <Header />

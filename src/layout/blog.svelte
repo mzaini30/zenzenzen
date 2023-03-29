@@ -1,4 +1,6 @@
 <script>
+  export let judul, ringkasan, gambar;
+
   import Base from "./base.svelte";
   import Header from "../bagian/header.svelte";
   import Sidebar from "../bagian/sidebar.svelte";
@@ -10,8 +12,7 @@
   import gambar_default from "../fungsi/gambar-default";
   import CardBesar from "../card/besar.svelte";
   import "../style/prism.css";
-
-  export let judul, ringkasan, gambar;
+  import Sosial from "../bagian/meta-sosial.svelte";
 
   let slug = "";
   if (browser) {
@@ -19,17 +20,21 @@
   }
 </script>
 
+<svelte:head>
+  <Sosial {judul} deskripsi={ringkasan} {gambar} />
+</svelte:head>
+
 <MetaTags title={judul} description={ringkasan} />
 
 <Base>
   <Header />
   <div class="py-7">
     <div class="grid grid-cols-4 gap-7 w-270 max-w-[95%] mx-auto">
-      <div
-        class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full prose max-w-full"
-      >
+      <div class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full ">
         <CardBesar {judul} {gambar} />
-        <slot />
+        <div class="prose max-w-full">
+          <slot />
+        </div>
         <Komentar {slug} />
       </div>
       <div class="col-span-4 sm:col-span-1 grid grid-cols-1 gap-3">

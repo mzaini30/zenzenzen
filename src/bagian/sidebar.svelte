@@ -8,9 +8,23 @@
   class="last:[&>*]:sticky last:[&>*]:top-19 last:[&>*]:mb-0 [&>*]:mb-5 [&>*]:block"
 >
   <a href="https://wa.me/6281545143654">
-    <img src={iklan} alt="Pasang iklan" width="460" height="280" />
+    <img
+      src={iklan}
+      alt="Pasang iklan"
+      title="Pasang iklan"
+      loading="lazy"
+      width="460"
+      height="280"
+    />
   </a>
-  <img src={pluang} alt="Kode referal Pluang" />
+  <img
+    src={pluang}
+    loading="lazy"
+    alt="Kode referal Pluang"
+    title="Kode referal Pluang"
+    width="500"
+    height="896"
+  />
   <a href="https://brtnetwork.id"
     ><img
       src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"
@@ -18,9 +32,17 @@
       title="Komunitas BRT Network"
       width="1000"
       height="724"
+      loading="lazy"
     /></a
   >
   <a href="https://wa.me/6281545143654">
-    <img src={iklan} alt="Pasang iklan" width="460" height="280" />
+    <img
+      src={iklan}
+      loading="lazy"
+      alt="Pasang iklan"
+      title="Pasang iklan"
+      width="460"
+      height="280"
+    />
   </a>
 </div>

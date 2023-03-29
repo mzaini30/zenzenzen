@@ -2,6 +2,7 @@
   import Cetak from "../fungsi/cetak.svelte";
   import semua_tulisan from "../fungsi/semua-tulisan";
   import { goto } from "$app/navigation";
+  import { page } from "$app/stores";
 
   let kategori_target;
 
@@ -28,7 +29,9 @@
   class="bg-red-500 w-full z-999 text-white py-3 sticky top-0 hover:[&_a]:text-black"
 >
   <div class="mx-auto w-270 max-w-[95%] flex justify-between">
-    <h1><a href="/">Zen Zen</a></h1>
+    <svelte:element this={$page.route.id == "/" ? "h1" : "div"}>
+      <a href="/">Zen Zen </a>
+    </svelte:element>
     <select
       on:change={(event) =>
         menuju(`/kategori/${event.target.value.toLowerCase()}`)}
