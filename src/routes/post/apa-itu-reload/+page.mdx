@@ -1,0 +1,88 @@
+---
+judul: Anti Reload dengan Svelte
+kategori: pemrograman
+tanggal: 2023-03-29 08:08:21
+gambar: "/gambar-untuk-postingan/pexels-alex-knight-2599244.jpg"
+ringkasan: "Svelte solusi menghindari reload pada web app. Konsep SPA, performa cepat, dan mudah dikembangkan. Contoh kasus dan saran penggunaan Svelte."
+---
+
+Pernahkah kamu berpikir 🤔: Apakah reload di suatu website itu bisa dihilangkan?
+
+Maksudku reload di sini adalah ketika kamu mengklik suatu link, apa yang terjadi? Yap, dia akan loading lagi untuk memuat halaman berikutnya. Hal ini terasa sangat lambat. Bisa nggak ya, pengalaman yang menjengkelkan ini dihilangkan? Jadi, pengennya tu nggak usah pakai loading-loadingan. Langsung tampil aja gitu halaman webnya pas kita klik suatu link?
+
+Yap, tentu saja bisa! Contohnya adalah blog ini. Coba deh kamu klik salah satu link ke postingan lainnya, tentunya isinya akan langsung tampil dan nggak pakai loading.
+
+Kok bisa?
+
+Di sini, aku menggunakan SvelteKit sebagai pondasi menyusun blog ini. Cara membuat link juga sama seperti HTML pada umumnya: 😉
+
+`+page.svelte`:
+
+```html
+<a href="/postingan/ini-adalah-postingan">Ini adalah postingan</a>
+```
+
+`postingan/ini-adalah-postingan/+page.svelte`:
+
+```html
+<h1>Ini adalah postingan</h1>
+```
+
+Keren kan?
+
+## Apa Itu SvelteKit?
+
+Jadi, SvelteKit adalah framework dari Svelte. Sedangkan, Svelte adalah framework JavaScript yang membantumu membuat website dengan cepat dan powerful. Salah satu kelebihan dari SvelteKit itu adalah routing. Jadi, kita bisa membuat halaman-halaman pada folder `src/routes/` yang kalau misalnya ada link di halaman tersebut yang menuju halaman lainnya, dia nggak pakai loading lagi, dan langsung muncul halaman berikutnya.
+
+Fitur lainnya adalah kode-kodenya yang sama dengan HTML, CSS, dan JavaScript pada umumnya, berbeda dengan React yang full sintaksnya adalah JavaScript + XML. Contoh kode kalau di Svelte: 😎
+
+```html
+<script>
+  let name = "Svelte";
+</script>
+
+<h1>Hello {name}!</h1>
+
+<style>
+  h1 {
+    color: red;
+  }
+</style>
+```
+
+Kalau di React:
+
+```jsx
+import React from "react";
+import "./styles.css";
+
+export default function App() {
+  const [name, setName] = React.useState("React");
+
+  return (
+    <div>
+      <h1>Hello {name}!</h1>
+    </div>
+  );
+}
+```
+
+Lebih sederhana Svelte kan?
+
+## SPA: Kunci Anti Reload
+
+Jadi, kunci sebenarnya adalah SPA (single page application). Jadi, sebenarnya itu konsepnya adalah yang kita buka, atau yang tampil di layar itu hanyalah `index.html`. Kemudian, ketika kita klik link ke halaman lain, tidaklah berpindah ke halaman tersebut. Atau, tidak berpindah ke `about.html`. Tapi, tetap di `index.html` namun isinya `about.html` disalin dan ditampilkan di layar. Sederhananya seperti itu.
+
+Makanya, mau sebanyak apapun kita klik link, sebenarnya, kita masih di `index.html`.😉
+
+## Kelebihan Svelte Lainnya
+
+🔍 Kelebihan lainnya adalah **ukuran file yang lebih kecil**. Berbeda dengan Vue maupun React yang merupakan library, Svelte adalah compiler. Jadi, kode-kode yang kita buat itu, akan diterjemahkan menjadi kode-kode JavaScript yang telah dioptimalkan. Berbeda dengan Vue dan React yang dia itu mengincludekan file librarynya yang lumayan besar.
+
+💨 Lalu, **performanya juga lebih cepat** karena tidak menggunakan konsep rerender seperti di React. Jadi, kalau misalnya kita mengubah suatu data, maka hanya bagian yang berubah saja yang akan diupdate. Tidak seperti React yang akan merender ulang semua bagian yang ada di dalamnya.
+
+🧑‍💻 Kelebihan yang paling utama dan membuat nyaman dari sisi DX (developer experience) adalah **kode-kodenya yang sama dengan HTML, CSS, dan JavaScript**. Sehingga, learning curve-nya rendah dan siapapun bisa menggunakan Svelte.
+
+## Credit
+
+Foto oleh Alex Knight: https://www.pexels.com/id-id/foto/foto-robot-sudut-tinggi-2599244/
