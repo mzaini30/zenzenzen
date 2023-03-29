@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      var id = "87748ad35809ffee1386f5cf8e55be763196f8dc";
+    </script>
+    <script
+      type="text/javascript"
+      src="https://api.sosiago.id/js/tracking.js"
+    ></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-49BFP0TBVZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-49BFP0TBVZ");
+    </script>
+    <link rel="icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/kumpulan-list.cc3f1f55.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.0eda2deb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6071a44b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b4f2d22d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.70d3853d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/layout.svelte.2d939433.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.js.984db11e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/post-apa-itu-reload-page.mdx.ff77f838.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/kumpulan-list.3e537989.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.57523500.js"><title>Anti Reload dengan Svelte</title><!-- HEAD_svelte-1h7w4y4_START --><meta name="robots" content="index,follow"><meta name="googlebot" content="index,follow"><meta name="description" content="Svelte solusi menghindari reload pada web app. Konsep SPA, performa cepat, dan mudah dikembangkan. Contoh kasus dan saran penggunaan Svelte."><!-- HEAD_svelte-1h7w4y4_END --><!-- HEAD_svelte-1cizahm_START --><link rel="canonical" href="https://zenzen.web.id/post/apa-itu-reload"><!-- HEAD_svelte-1cizahm_END -->
+    <meta name="theme-color" content="#EF4444" />
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">
+
+
+
+
+
+
+<div class="bg-red-500 w-full z-999 text-white py-3 sticky top-0 hover:[&_a]:text-black"><div class="mx-auto w-270 max-w-[95%] flex justify-between"><h1><a href="/">Zen Zen</a></h1>
+    <select class="text-black px-2 sm:hidden"><option disabled selected="selected" value="Menu">Menu</option><option value="Dakwah">Dakwah</option><option value="Keuangan">Keuangan</option><option value="Pemrograman">Pemrograman</option><option value="Psikologi">Psikologi</option><option value="Seo">Seo</option></select>
+    <div class="sm:flex gap-3 hidden"><a href="/kategori/dakwah">dakwah</a><a href="/kategori/keuangan">keuangan</a><a href="/kategori/pemrograman">pemrograman</a><a href="/kategori/psikologi">psikologi</a><a href="/kategori/seo">seo</a></div></div></div>
+  <div class="py-7"><div class="grid grid-cols-4 gap-7 w-270 max-w-[95%] mx-auto"><div class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full prose max-w-full"><div class="block relative top-0 pb-[56.25%]"><img src="/gambar-untuk-postingan/pexels-alex-knight-2599244.jpg" class="w-full object-cover aspect-video rounded-lg absolute top-0" alt="Gambar Anti Reload dengan Svelte" width="640" height="427">
+  <div class="w-full object-cover rounded-lg text-2xl p-4 aspect-video bg-gradient-to-t from-black/50 absolute top-0 grid grid-cols-1 gap-5 content-between"><div></div>
+    <div class="text-white">Anti Reload dengan Svelte</div></div></div>
+        <p>Pernahkah kamu berpikir 🤔: Apakah reload di suatu website itu bisa dihilangkan?</p>
+<p>Maksudku reload di sini adalah ketika kamu mengklik suatu link, apa yang terjadi? Yap, dia akan loading lagi untuk memuat halaman berikutnya. Hal ini terasa sangat lambat. Bisa nggak ya, pengalaman yang menjengkelkan ini dihilangkan? Jadi, pengennya tu nggak usah pakai loading-loadingan. Langsung tampil aja gitu halaman webnya pas kita klik suatu link?</p>
+<p>Yap, tentu saja bisa! Contohnya adalah blog ini. Coba deh kamu klik salah satu link ke postingan lainnya, tentunya isinya akan langsung tampil dan nggak pakai loading.</p>
+<p>Kok bisa?</p>
+<p>Di sini, aku menggunakan SvelteKit sebagai pondasi menyusun blog ini. Cara membuat link juga sama seperti HTML pada umumnya: 😉</p>
+<p><code>+page.svelte</code>:</p>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/postingan/ini-adalah-postingan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Ini adalah postingan<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p><code>postingan/ini-adalah-postingan/+page.svelte</code>:</p>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Ini adalah postingan<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p>Keren kan?</p>
+<h2>Apa Itu SvelteKit?</h2>
+<p>Jadi, SvelteKit adalah framework dari Svelte. Sedangkan, Svelte adalah framework JavaScript yang membantumu membuat website dengan cepat dan powerful. Salah satu kelebihan dari SvelteKit itu adalah routing. Jadi, kita bisa membuat halaman-halaman pada folder <code>src/routes/</code> yang kalau misalnya ada link di halaman tersebut yang menuju halaman lainnya, dia nggak pakai loading lagi, dan langsung muncul halaman berikutnya.</p>
+<p>Fitur lainnya adalah kode-kodenya yang sama dengan HTML, CSS, dan JavaScript pada umumnya, berbeda dengan React yang full sintaksnya adalah JavaScript + XML. Contoh kode kalau di Svelte: 😎</p>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"Svelte"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Hello &#123;name&#125;!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">h1</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p>Kalau di React:</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./styles.css"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">"React"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Hello </span><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span><span class="token plain-text">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>Lebih sederhana Svelte kan?</p>
+<h2>SPA: Kunci Anti Reload</h2>
+<p>Jadi, kunci sebenarnya adalah SPA (single page application). Jadi, sebenarnya itu konsepnya adalah yang kita buka, atau yang tampil di layar itu hanyalah <code>index.html</code>. Kemudian, ketika kita klik link ke halaman lain, tidaklah berpindah ke halaman tersebut. Atau, tidak berpindah ke <code>about.html</code>. Tapi, tetap di <code>index.html</code> namun isinya <code>about.html</code> disalin dan ditampilkan di layar. Sederhananya seperti itu.</p>
+<p>Makanya, mau sebanyak apapun kita klik link, sebenarnya, kita masih di <code>index.html</code>.😉</p>
+<h2>Kelebihan Svelte Lainnya</h2>
+<p>🔍 Kelebihan lainnya adalah <strong>ukuran file yang lebih kecil</strong>. Berbeda dengan Vue maupun React yang merupakan library, Svelte adalah compiler. Jadi, kode-kode yang kita buat itu, akan diterjemahkan menjadi kode-kode JavaScript yang telah dioptimalkan. Berbeda dengan Vue dan React yang dia itu mengincludekan file librarynya yang lumayan besar.</p>
+<p>💨 Lalu, <strong>performanya juga lebih cepat</strong> karena tidak menggunakan konsep rerender seperti di React. Jadi, kalau misalnya kita mengubah suatu data, maka hanya bagian yang berubah saja yang akan diupdate. Tidak seperti React yang akan merender ulang semua bagian yang ada di dalamnya.</p>
+<p>🧑‍💻 Kelebihan yang paling utama dan membuat nyaman dari sisi DX (developer experience) adalah <strong>kode-kodenya yang sama dengan HTML, CSS, dan JavaScript</strong>. Sehingga, learning curve-nya rendah dan siapapun bisa menggunakan Svelte.</p>
+<h2>Credit</h2>
+<p>Foto oleh Alex Knight: <a href="https://www.pexels.com/id-id/foto/foto-robot-sudut-tinggi-2599244/" rel="nofollow">https://www.pexels.com/id-id/foto/foto-robot-sudut-tinggi-2599244/</a></p>
+        <div class="rounded text-sm border border-gray-500 shadow bg-white"><div class="judul bg-gray-500 text-white p-2">Tambahkan Komentar Baru</div>
+  <div class="isi p-2"><form action="" class="grid grid-cols-1 gap-2"><label for="">Nama</label>
+      <input type="text" class="block w-full p-2 border border-gray-300 rounded" required>
+      <label for="">Email</label>
+      <input type="email" required class="block w-full p-2 border border-gray-300 rounded">
+      <label for="">Komentar</label>
+      <textarea name="" id="" required cols="30" class="block w-full p-2 border border-gray-300 rounded" rows="10"></textarea>
+      <div><input type="submit" value="Kirim" class="bg-black cursor-pointer text-white px-3 py-1 rounded inline-block"></div></form></div></div>
+
+</div>
+      <div class="col-span-4 sm:col-span-1 grid grid-cols-1 gap-3"><div class="last:[&>*]:sticky last:[&>*]:top-19 last:[&>*]:mb-0 [&>*]:mb-5 [&>*]:block"><a href="https://wa.me/6281545143654"><img src="/_app/immutable/assets/your_ad_here_banner.db2a9a39.jpg" alt="Pasang iklan" width="460" height="280"></a>
+  <img src="/_app/immutable/assets/pluang.ddbd04d0.jpg" alt="Kode referal Pluang">
+  <a href="https://brtnetwork.id"><img src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp" alt="Logo Komunitas BRT Network" title="Komunitas BRT Network" width="1000" height="724"></a>
+  <a href="https://wa.me/6281545143654"><img src="/_app/immutable/assets/your_ad_here_banner.db2a9a39.jpg" alt="Pasang iklan" width="460" height="280"></a></div></div></div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 max-w-[95%] w-270 mx-auto"><div><div class="mb-4"><div class="flex justify-between items-center"><h2 class="text-3xl font-bold text-red-500 capitalize">psikologi</h2>
+  </div></div>
+  <ul class="grid grid-cols-1 gap-4 text-sm"><li><a href="../post/nggak-masalah-jika-belum-menghasilkan" class="hover:text-red-700">Nggak Masalah Jika Belum Menghasilkan</a>
+      </li><li><a href="../post/multitasking" class="hover:text-red-700">Multitasking Itu Berbahaya</a>
+      </li>
+    <li><a href="/kategori/psikologi" class="text-red-500">Selengkapnya →</a></li></ul></div>
+      <div><div class="mb-4"><div class="flex justify-between items-center"><h2 class="text-3xl font-bold text-red-500 capitalize">dakwah</h2>
+  </div></div>
+  <ul class="grid grid-cols-1 gap-4 text-sm"><li><a href="../post/semangat-bekerja-dan-mencari-pahala" class="hover:text-red-700">Semangat Bekerja dan Mencari Pahala</a>
+      </li><li><a href="../post/cara-membuat-live-kajian" class="hover:text-red-700">Cara Membuat Live Kajian</a>
+      </li><li><a href="../post/quran-dan-perubahan" class="hover:text-red-700">Mengapa Membaca Quran Tidak Membawa Perubahan Hidup?</a>
+      </li><li><a href="../post/agama-buat-apa" class="hover:text-red-700">Agama Itu Buat Apa?</a>
+      </li>
+    <li><a href="/kategori/dakwah" class="text-red-500">Selengkapnya →</a></li></ul></div>
+      <div><div class="mb-4"><div class="flex justify-between items-center"><h2 class="text-3xl font-bold text-red-500 capitalize">pemrograman</h2>
+  </div></div>
+  <ul class="grid grid-cols-1 gap-4 text-sm"><li><a href="../post/apa-itu-reload" class="hover:text-red-700">Anti Reload dengan Svelte</a>
+      </li><li><a href="../post/ngeri-svelte" class="hover:text-red-700">Component Based pada Svelte</a>
+      </li><li><a href="../post/snake-case-lebih-baik" class="hover:text-red-700">Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik</a>
+      </li><li><a href="../post/aplikasi-android-dari-html" class="hover:text-red-700">Kenapa Aku Membuat Aplikasi Android dari HTML?</a>
+      </li><li><a href="../post/biaya-jasa" class="hover:text-red-700">Biaya Jasa Zen</a>
+      </li>
+    <li><a href="/kategori/pemrograman" class="text-red-500">Selengkapnya →</a></li></ul></div></div></div>
+  <div class="w-full p-3 text-sm bg-red-500 text-white text-center">Aku harap, kamu suka dengan blog ini...
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_db1ndn = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.0eda2deb.js"),
+						import("../_app/immutable/entry/app.70d3853d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_db1ndn.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
