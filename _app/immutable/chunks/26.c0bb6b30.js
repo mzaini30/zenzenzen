@@ -1,1 +1,0 @@
-import{default as t}from"../entry/semua-postingan-page.svelte.740ec750.js";export{t as component};
