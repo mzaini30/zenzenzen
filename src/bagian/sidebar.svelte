@@ -12,14 +12,12 @@
       src={iklan}
       alt="Pasang iklan"
       title="Pasang iklan"
-      loading="lazy"
       width="460"
       height="280"
     />
   </a>
   <img
     src={pluang}
-    loading="lazy"
     alt="Kode referal Pluang"
     title="Kode referal Pluang"
     width="500"
@@ -32,13 +30,11 @@
       title="Komunitas BRT Network"
       width="1000"
       height="724"
-      loading="lazy"
     /></a
   >
   <a href="https://wa.me/6281545143654">
     <img
       src={iklan}
-      loading="lazy"
       alt="Pasang iklan"
       title="Pasang iklan"
       width="460"

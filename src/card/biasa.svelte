@@ -16,7 +16,6 @@
       title="Gambar {judul}"
       width="640"
       height="427"
-      loading="lazy"
     />
   </a>
   <div>
