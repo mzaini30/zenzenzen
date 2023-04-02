@@ -1,0 +1,1 @@
+import"../chunks/index.eda26959.js";import{e as m,L as o}from"../chunks/kumpulan-list.f81fba4c.js";export{m as default,o as metadata};
