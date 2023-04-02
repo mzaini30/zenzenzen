@@ -33,7 +33,7 @@
       <div class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full ">
         <CardBesar {judul} {gambar} />
         <div
-          class="prose max-w-full [&_img]:mx-auto [&_img]:block [&_img]:rounded [&_img]:border [&_iframe]:mx-auto [&_iframe]:block "
+          class="prose max-w-full [&_img]:mx-auto [&_img]:block [&_img]:rounded [&_img]:border [&_iframe]:mx-auto [&_iframe]:block [&_iframe]:rounded "
         >
           <slot />
         </div>
