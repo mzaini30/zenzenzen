@@ -6,8 +6,5 @@
   import Cetak from "../fungsi/cetak.svelte";
 </script>
 
-<svelte:head>
-  <link rel="canonical" href="https://zenzen.web.id{$page.route.id}" />
-</svelte:head>
 <!-- <Head /> -->
 <slot />

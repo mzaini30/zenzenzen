@@ -11,10 +11,14 @@
   }
 </script>
 
+{#if !$page.route.id.includes("[")}
+  <link rel="canonical" href="https://zenzen.web.id{$page.route.id}" />
+  <meta property="og:url" content="https://zenzen.web.id{$page.route.id}" />
+{/if}
+
 <meta property="og:title" content={judul} />
 <meta property="og:description" content={deskripsi} />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zenzen.web.id{$page.route.id}" />
 <meta property="og:image" content={gambar || gambar_default} />
 
 <meta name="twitter:card" content="summary_large_image" />
