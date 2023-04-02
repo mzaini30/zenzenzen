@@ -32,7 +32,9 @@
     <div class="grid grid-cols-4 gap-7 w-270 max-w-[95%] mx-auto">
       <div class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full ">
         <CardBesar {judul} {gambar} />
-        <div class="prose max-w-full">
+        <div
+          class="prose max-w-full [&_img]:mx-auto [&_img]:block [&_img]:rounded [&_img]:border [&_iframe]:mx-auto [&_iframe]:block "
+        >
           <slot />
         </div>
         <Komentar {slug} />
