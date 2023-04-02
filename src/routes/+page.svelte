@@ -2,7 +2,7 @@
   import Base from "../layout/base.svelte";
   import KumpulanList from "../bagian/kumpulan-list.svelte";
   import Header from "../bagian/header.svelte";
-  import Hero from "../bagian/hero.svelte";
+  import Hero from "../bagian/hero-card-besar.svelte";
   import IsiBeranda from "../bagian/isi-beranda.svelte";
   import KumpulanCard from "../bagian/kumpulan-card.svelte";
   import Sidebar from "../bagian/sidebar.svelte";

@@ -12,7 +12,7 @@
 <svelte:element
   this={link ? "a" : "h1"}
   href={link || null}
-  class="block relative top-0 pb-[56.25%]"
+  class="block wadah relative top-0 pb-[56.25%]"
 >
   <img
     src={gambar || gambar_default}
@@ -23,7 +23,7 @@
     height="427"
   />
   <div
-    class="w-full object-cover rounded-lg text-2xl p-4 aspect-video bg-gradient-to-t from-black/50 absolute top-0 grid grid-cols-1 gap-5 content-between"
+    class="w-full object-cover rounded-lg text-2xl p-4 aspect-video bg-gradient-to-t from-black/50 absolute top-0 grid grid-cols-1 gap-5 content-between latar"
   >
     <div />
     <div class="text-white">{judul}</div>
