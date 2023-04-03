@@ -17,11 +17,11 @@
   import sisipkan_related_posts from "../fungsi/sisipkan-related-posts-di-tulisan";
 
   let isinya;
-  let hasilnya;
+  // let hasilnya;
 
-  $: if (isinya) {
-    hasilnya = sisipkan_related_posts(isinya?.innerHTML, kategori);
-  }
+  // $: if (isinya) {
+  //   hasilnya = sisipkan_related_posts(isinya?.innerHTML, kategori);
+  // }
 
   let slug = "";
   if (browser) {

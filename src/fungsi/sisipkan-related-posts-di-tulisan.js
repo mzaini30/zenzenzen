@@ -8,6 +8,7 @@ export default function (teks, kategori) {
   let tulisan_semuanya = Object.entries(semua_tulisan).filter(
     (x) => x[1].metadata.kategori == kategori
   );
+  // errornya mulai dari sini
   tulisan_semuanya = acak(tulisan_semuanya).split(
     0,
     banyak_postingan_lainnya_yang_diambil
