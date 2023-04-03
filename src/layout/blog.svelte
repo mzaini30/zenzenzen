@@ -17,11 +17,11 @@
   import sisipkan_related_posts from "../fungsi/sisipkan-related-posts-di-tulisan";
 
   let isinya;
-  // let hasilnya;
+  let hasilnya;
 
-  // $: if (isinya) {
-  //   hasilnya = sisipkan_related_posts(isinya?.innerHTML, kategori);
-  // }
+  $: if (isinya) {
+    hasilnya = sisipkan_related_posts(isinya?.innerHTML, kategori);
+  }
 
   let slug = "";
   if (browser) {
@@ -43,10 +43,15 @@
       <div class="col-span-4 sm:col-span-3 [&_iframe]:max-w-full ">
         <CardBesar {judul} {gambar} />
         <div
-          bind:this={isinya}
-          class="prose max-w-full [&_img]:mx-auto [&_img]:block [&_img]:rounded [&_img]:border [&_iframe]:mx-auto [&_iframe]:block [&_iframe]:rounded "
+          class="prose max-w-full [&_img]:mx-auto [&_img]:block [&_img]:rounded [&_img]:border [&_iframe]:mx-auto [&_iframe]:block [&_iframe]:rounded [&_.sisipan]:p-3 [&_.sisipan]:bg-red-100 [&_.sisipan]:rounded"
         >
-          <slot />
+          {#if !hasilnya}
+            <div bind:this={isinya}>
+              <slot />
+            </div>
+          {:else}
+            {@html hasilnya}
+          {/if}
         </div>
         <Komentar {slug} />
       </div>
