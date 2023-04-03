@@ -5,6 +5,7 @@
   import Header from "../bagian/header.svelte";
   import Sidebar from "../bagian/sidebar.svelte";
   import KumpulanList from "../bagian/kumpulan-list.svelte";
+  import KumpulanCard from "../bagian/kumpulan-card.svelte";
   import Footer from "../bagian/footer.svelte";
   import Komentar from "../bagian/komentar.svelte";
   import { browser } from "$app/environment";
@@ -58,13 +59,11 @@
       <div class="col-span-4 sm:col-span-1 grid grid-cols-1 gap-3">
         <Sidebar />
       </div>
-    </div>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 max-w-[95%] w-270 mx-auto"
+    </div><div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 w-270 max-w-[95%] mx-auto"
     >
-      <KumpulanList kategori="psikologi" />
-      <KumpulanList kategori="dakwah" />
-      <KumpulanList kategori="pemrograman" />
+      <KumpulanCard kategori="dakwah" />
+      <KumpulanCard kategori="pemrograman" />
     </div>
   </div>
   <Footer />
