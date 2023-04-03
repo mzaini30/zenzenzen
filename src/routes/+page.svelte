@@ -43,7 +43,7 @@
       class="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 w-270 max-w-[95%] mx-auto"
     >
       <KumpulanCard kategori="dakwah" />
-      <KumpulanCard kategori="seo" />
+      <KumpulanCard kategori="blog" />
     </div>
   </div>
   <Footer />
