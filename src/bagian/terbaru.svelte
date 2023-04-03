@@ -21,8 +21,26 @@
 </script>
 
 <JudulSegmen teks="Postingan Terbaru" link_selengkapnya="/semua-postingan" />
-<div class="grid grid-cols-2 gap-6 pt-3 mb-10">
-  {#each tulisan_rapi.splice(0, 7) as x}
+<div class="pt-3 ">
+  <CardBesar
+    gambar={tulisan_rapi[0][1].metadata.gambar}
+    judul={tulisan_rapi[0][1].metadata.judul}
+    link={tulisan_rapi[0][0]}
+  />
+</div>
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+  {#each tulisan_rapi.slice(0, 5) as x, n}
+    {#if n != 0}
+      <CardBersebelahan
+        gambar={x[1].metadata.gambar}
+        judul={x[1].metadata.judul}
+        link={x[0]}
+      />
+    {/if}
+  {/each}
+</div>
+<!-- <div class="grid grid-cols-2 gap-6 pt-3 mb-10">
+  {#each tulisan_rapi.slice(0, 7) as x}
     <CardBiasa
       link={x[0]}
       gambar={x[1].metadata.gambar}
@@ -40,7 +58,7 @@
       height="280"
     />
   </a>
-</div>
+</div> -->
 <JudulSegmen teks="Pemrograman" link_selengkapnya="/kategori/pemrograman" />
 <div class="pt-3 ">
   <CardBesar

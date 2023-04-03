@@ -13,6 +13,8 @@
   import { MetaTags } from "svelte-meta-tags";
   import { browser } from "$app/environment";
   import Sosial from "../../../bagian/meta-sosial.svelte";
+  import KumpulanCard from "../../../bagian/kumpulan-card.svelte";
+  import CardBersebelahan from "../../../card/bersebelahan.svelte";
 
   const judul = `Kategori ${data.kategori}`;
   const deskripsi = `Kumpulan postingan yang memiliki kategori ${data.kategori}`;
@@ -32,25 +34,31 @@
         <div class="mb-5">
           <JudulSegmen tag="h1" teks="Kategori {data.kategori}" />
         </div>
-        {#each data.hasil as [key, value]}
-          <div class="mb-5">
+        <div class="grid grid-cols-1 gap-5">
+          {#each data.hasil as [key, value]}
+            <CardBersebelahan
+              judul={value.metadata.judul}
+              gambar={value.metadata.gambar}
+              link={olah_link(key)}
+            />
+            <!-- <div class="mb-5">
             <p class="text-2xl font-bold">
               <a href={olah_link(key)}>{value.metadata.judul}</a>
             </p>
             <p class="text-sm text-gray-500">{value.metadata.ringkasan}</p>
-          </div>
-        {/each}
+          </div> -->
+          {/each}
+        </div>
       </div>
       <div class="col-span-4 sm:col-span-1 grid grid-cols-1 gap-3">
         <Sidebar />
       </div>
     </div>
     <div
-      class="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-10 max-w-[95%] w-270 mx-auto"
+      class="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 w-270 max-w-[95%] mx-auto"
     >
-      <KumpulanList kategori="psikologi" />
-      <KumpulanList kategori="dakwah" />
-      <KumpulanList kategori="pemrograman" />
+      <KumpulanCard kategori="dakwah" />
+      <KumpulanCard kategori="pemrograman" />
     </div>
   </div>
   <Footer />
