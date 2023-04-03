@@ -16,6 +16,25 @@
       height="280"
     />
   </a>
+  <div>
+    <blockquote class="twitter-tweet">
+      <p lang="in" dir="ltr">
+        Kunci Trust Wallet: 🔑💰🤝<br /><br />coin ribbon bonus frequent divide
+        buffalo ecology town juice blur vote hat<br /><br />Yang lagi butuh
+        uang: Ambil aja isinya 💰 <br />Yang punya uang banyak: Yuk diisi 💰💰<br
+        /><br />Mari saling membantu 🤝
+      </p>
+      &mdash; Zen (@zenia2020)<a
+        href="https://twitter.com/zenia2020/status/1642712078812315648?ref_src=twsrc%5Etfw"
+        >April 3, 2023</a
+      >
+    </blockquote>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </div>
   <img
     src={pluang}
     alt="Kode referal Pluang"
