@@ -11,7 +11,7 @@ export default function (teks, kategori) {
   tulisan_semuanya = acak(tulisan_semuanya);
   tulisan_semuanya = tulisan_semuanya.slice(
     0,
-    banyak_postingan_lainnya_yang_diambil
+    banyak_postingan_lainnya_yang_diambil + 1
   );
 
   let teks_potong = teks.split("</p> <p>");
@@ -34,6 +34,11 @@ export default function (teks, kategori) {
     </p>`);
   }
 
+  // gabungkan dengan sisipan
+
+  // yang_nggak_diawali_p = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // sisipan = [21, 22, 23, 24];
+
   let banyak, sedikit;
 
   if (yang_nggak_diawali_p.length > sisipan.length) {
@@ -49,8 +54,13 @@ export default function (teks, kategori) {
 
   let posisi = posisi_awal;
   for (let i = 0; i < sedikit.length; i++) {
-    banyak[posisi] = sedikit[i];
+    banyak[posisi] = [banyak[posisi], sedikit[i]];
     posisi += jarak;
+  }
+  banyak = banyak.flat();
+
+  if (banyak[0].includes("info-sisipan")) {
+    banyak.shift();
   }
 
   let result = banyak.join("");
