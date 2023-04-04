@@ -34,22 +34,26 @@ export default function (teks, kategori) {
     </p>`);
   }
 
-  // let A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  // let B = [11, 12, 13, 14];
-  let result = [];
+  let banyak, sedikit;
 
-  let maxLength = Math.max(yang_nggak_diawali_p.length, sisipan.length);
-
-  for (let i = 0; i < maxLength; i++) {
-    if (i < yang_nggak_diawali_p.length) {
-      result.push(yang_nggak_diawali_p[i]);
-    }
-    if (i < sisipan.length) {
-      result.push(sisipan[i]);
-    }
+  if (yang_nggak_diawali_p.length > sisipan.length) {
+    banyak = yang_nggak_diawali_p;
+    sedikit = sisipan;
+  } else {
+    banyak = sisipan;
+    sedikit = yang_nggak_diawali_p;
   }
 
-  result = result.join("");
+  const jarak = Math.floor(banyak.length / sedikit.length);
+  const posisi_awal = Math.floor((banyak.length - sedikit.length * jarak) / 2);
+
+  let posisi = posisi_awal;
+  for (let i = 0; i < sedikit.length; i++) {
+    banyak[posisi] = sedikit[i];
+    posisi += jarak;
+  }
+
+  let result = banyak.join("");
 
   return result;
 }
