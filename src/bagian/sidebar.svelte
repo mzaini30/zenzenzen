@@ -42,6 +42,11 @@
     width="500"
     height="896"
   />
+  <img
+    src="https://user-images.githubusercontent.com/7939342/229728577-e6309762-dd6e-4c8a-9ec6-162d3e3a27d8.jpeg"
+    alt="Kode referal Pintu"
+    title="Kode referal Pintu"
+  />
   <a href="https://brtnetwork.id"
     ><img
       src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"
