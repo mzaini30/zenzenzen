@@ -1,0 +1,1 @@
+import{s as o}from"./semua-tulisan.eb0100bf.js";function r({params:t}){let e=Object.entries(o);return e=e.filter(a=>a[1].metadata.kategori===t.kategori),{hasil:e,kategori:t.kategori}}const l=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{l as _,r as l};
