@@ -7,7 +7,7 @@
 <div
   class="last:[&>*]:sticky last:[&>*]:top-19 last:[&>*]:mb-0 [&>*]:mb-5 [&>*]:block"
 >
-  <a href="https://wa.me/6281545143654">
+  <!-- <a href="https://wa.me/6281545143654">
     <img
       src={iklan}
       alt="Pasang iklan"
@@ -15,7 +15,7 @@
       width="460"
       height="280"
     />
-  </a>
+  </a> -->
   <img
     src={pluang}
     alt="Kode referal Pluang"
@@ -37,7 +37,7 @@
       height="724"
     /></a
   >
-  <a href="https://wa.me/6281545143654">
+  <!-- <a href="https://wa.me/6281545143654">
     <img
       src={iklan}
       alt="Pasang iklan"
@@ -45,5 +45,5 @@
       width="460"
       height="280"
     />
-  </a>
+  </a> -->
 </div>
