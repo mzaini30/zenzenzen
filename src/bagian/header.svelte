@@ -3,8 +3,10 @@
   import semua_tulisan from "../fungsi/semua-tulisan";
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
+  import Garis from "./garis-di-option.svelte";
 
   let kategori_target;
+  const link_community = "https://chat.whatsapp.com/HoclSRlY284LidNQqItrOd";
 
   const semua_postingan = semua_tulisan;
   // const semua_postingan = import.meta.glob("../postingan/*.mdx", {
@@ -34,18 +36,24 @@
     </svelte:element>
     <select
       on:change={(event) =>
-        menuju(`/kategori/${event.target.value.toLowerCase()}`)}
+        event.target.value.startsWith("https://")
+          ? (location.href = event.target.value)
+          : menuju(`/kategori/${event.target.value.toLowerCase()}`)}
       class="text-black px-2 sm:hidden"
     >
       <option disabled selected="selected">Menu</option>
+      <Garis />
       {#each semua_kategori as kategori}
         <option>{capitalizeFirstLetter(kategori)}</option>
       {/each}
+      <Garis />
+      <option value={link_community}>Join Community</option>
     </select>
     <div class="sm:flex gap-3 hidden">
       {#each semua_kategori as kategori}
         <a href="/kategori/{kategori}">{kategori}</a>
       {/each}
+      <a class="font-bold" href={link_community}>join community</a>
     </div>
   </div>
 </div>
