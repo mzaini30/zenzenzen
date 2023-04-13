@@ -7,6 +7,7 @@
 <div
   class="last:[&>*]:sticky last:[&>*]:top-19 last:[&>*]:mb-0 [&>*]:mb-5 [&>*]:block"
 >
+<a href="https://my.domainesia.com/ref.php?u=8297"><img src="https://dnva.me/ksz6h" width="300px" height="600px" alt="DomaiNesia"></a>
   <!-- <a href="https://wa.me/6281545143654">
     <img
       src={iklan}
