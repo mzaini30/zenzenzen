@@ -24,6 +24,8 @@
       height="280"
     />
   </a> -->
+  <a href="https://pluang.com/crypto-currency/trading-view-chart?cryptoCurrencySymbol=BTC"
+    >
   <img
     src={pluang}
     alt="Kode referal Pluang"
@@ -31,6 +33,8 @@
     width="500"
     height="896"
   />
+    </a
+  >
   <img
     src="https://user-images.githubusercontent.com/7939342/229728577-e6309762-dd6e-4c8a-9ec6-162d3e3a27d8.jpeg"
     alt="Kode referal Pintu"
