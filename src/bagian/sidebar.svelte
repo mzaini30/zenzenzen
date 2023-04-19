@@ -15,6 +15,15 @@
       alt="DomaiNesia"
     /></a
   >
+  <a href="https://www.like4like.org/?ref=mzaini30" title="Free Facebook Likes"
+    ><img
+      width="300"
+      height="250"
+      title="Free Facebook Likes"
+      src="https://www.like4like.org/img/banners/like4like-social-media-exchange-300-250.png"
+      alt="Free Facebook Likes"
+    /></a
+  >
   <!-- <a href="https://wa.me/6281545143654">
     <img
       src={iklan}
@@ -24,8 +33,6 @@
       height="280"
     />
   </a> -->
-  <a href="https://pluang.com/crypto-currency/trading-view-chart?cryptoCurrencySymbol=BTC"
-    >
   <img
     src={pluang}
     alt="Kode referal Pluang"
@@ -33,8 +40,6 @@
     width="500"
     height="896"
   />
-    </a
-  >
   <img
     src="https://user-images.githubusercontent.com/7939342/229728577-e6309762-dd6e-4c8a-9ec6-162d3e3a27d8.jpeg"
     alt="Kode referal Pintu"
