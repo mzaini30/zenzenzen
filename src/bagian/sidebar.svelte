@@ -40,6 +40,7 @@
     width="500"
     height="896"
   />
+  <a href="https://my.idcloudhost.com/aff.php?aff=6895"><img src="https://idcloudhost.com/wp-content/uploads/2017/01/336x280.png" height="280" width="336" border="0" alt="IDCloudHost | SSD Cloud Hosting Indonesia" /></a>
   <img
     src="https://user-images.githubusercontent.com/7939342/229728577-e6309762-dd6e-4c8a-9ec6-162d3e3a27d8.jpeg"
     alt="Kode referal Pintu"
