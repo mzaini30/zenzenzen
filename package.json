@@ -24,6 +24,7 @@
     "glob": "^9.3.1",
     "gravatar": "^1.8.2",
     "kumpulan-tools": "^1.0.0",
+    "rehype-external-links": "^2.0.1",
     "svelte-meta-tags": "^2.7.0",
     "unocss": "^0.50.6",
     "vite-plugin-svelte-inspector": "^0.2.1"

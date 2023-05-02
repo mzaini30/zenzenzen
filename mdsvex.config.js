@@ -1,4 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
+import rehype_external_links from "rehype-external-links";
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx", ".mdx"],
@@ -9,7 +10,11 @@ const config = defineConfig({
   },
 
   remarkPlugins: [],
-  rehypePlugins: [],
+  rehypePlugins: [
+    rehype_external_links({
+      rel: ["dofollow"],
+    }),
+  ],
 });
 
 export default config;
