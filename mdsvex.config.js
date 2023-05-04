@@ -12,9 +12,9 @@ const config = defineConfig({
 
   remarkPlugins: [
     // remove_nofollow()
-    rehype_external_links({
-      rel: ["dofollow"],
-    }),
+    // rehype_external_links({
+    //   rel: ["dofollow"],
+    // }),
   ],
   rehypePlugins: [],
 });
