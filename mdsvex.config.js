@@ -1,6 +1,6 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
-import rehype_external_links from "rehype-external-links";
-import remove_nofollow from "./remove-nofollow.js";
+// import rehype_external_links from "rehype-external-links";
+// import remove_nofollow from "./remove-nofollow.js";
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx", ".mdx"],
