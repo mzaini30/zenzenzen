@@ -1,36 +1,27 @@
 {
-  "name": "blog-baru-pakai-svelte",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.5.0",
-    "@unocss/preset-typography": "^0.50.6",
-    "mdsvex": "^0.10.6",
-    "svelte": "^3.54.0",
-    "vite": "^4.2.0"
+    "@unocss/transformer-variant-group": "^0.52.7",
+    "prettier-plugin-astro": "^0.8.0",
+    "tiddlywiki": "^5.2.7"
   },
   "type": "module",
+  "scripts": {
+    "dev": "tiddlywiki src --listen",
+    "build": "astro build"
+  },
   "dependencies": {
-    "@sveltejs/adapter-static": "^2.0.1",
-    "@unocss/reset": "^0.50.6",
+    "@astrojs/sitemap": "^1.3.3",
+    "@astrojs/svelte": "^2.2.0",
+    "@unocss/reset": "^0.51.8",
+    "astro": "^2.5.7",
     "excalibur-zen": "^0.0.3",
-    "five-server": "^0.1.9",
-    "glob": "^9.3.1",
     "gravatar": "^1.8.2",
-    "hast-util-select": "^5.0.5",
+    "iklan-shopee": "^0.1.1",
     "kumpulan-tools": "^1.0.0",
-    "rehype-dom": "^6.0.1",
-    "rehype-external-links": "^2.0.1",
-    "remark-html": "^15.0.2",
-    "svelte-meta-tags": "^2.7.0",
-    "unist-util-visit": "^4.1.2",
-    "unocss": "^0.50.6",
-    "vite-plugin-svelte-inspector": "^0.2.1"
+    "only-toast": "^1.0.1",
+    "striptags": "^3.2.0",
+    "svelte": "^3.54.0",
+    "unocss": "^0.51.8",
+    "vite-plugin-yaml2": "^1.1.5"
   }
 }

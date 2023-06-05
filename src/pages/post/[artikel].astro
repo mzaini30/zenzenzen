@@ -1,0 +1,66 @@
+---
+import semuaPostingan from "../../data/semua-postingan";
+import Base from "../../layout/base.astro";
+import Header from "../../komponen/header.astro";
+import { acak } from "kumpulan-tools";
+import Giscus from "../../komponen/giscus.astro";
+import Komentar from "../../komponen/komentar.svelte";
+
+let url = Astro.url;
+
+export function getStaticPaths() {
+  return semuaPostingan().map(
+    ({ title, published_date, slug, text, ringkasan, kategori, gambar }) => ({
+      params: { artikel: slug },
+      props: { title, published_date, text, ringkasan, kategori, gambar },
+    })
+  );
+}
+
+const { title, published_date, text, ringkasan, kategori, gambar } =
+  Astro.props;
+
+let semuanya = semuaPostingan().filter((x) => x.kategori == kategori);
+semuanya = acak(semuanya);
+---
+
+<Base judul={title} gambar={gambar} deskripsi={ringkasan}>
+  <Header link_aktif="beranda" />
+  <div class="border-b-2"></div>
+  <div class="mx-auto py-10 w-700 max-w-[80%] gap-5 grid grid-cols-10">
+    <div class="col-span-10 sm:col-span-7">
+      <img class="w-full h-auto" src={gambar} alt="Cover artikel" />
+      <div class="prose [&_a]:text-blue-700 max-w-full [&_.tc-tiddlylink-missing]:(no-underline text-inherit)">
+        <h1>{title}</h1>
+        <Fragment
+          set:html={text
+            .replaceAll("/#", "/")
+            .replaceAll(`rel="noopener noreferrer"`, "")}
+        />
+        <div class="hidden">
+          <div
+            class="flex w-full gap-2 aspect-[1/1] object-cover rounded-[50%] w-10 border-b-2 w-full border-b-black focus:no-outline justify-between flex pt-3 inline-block focus:(bg-white text-black border-black border) hover:(bg-white text-black border-black border) text-white bg-black rounded-lg p-2 px-4 text-sm w-full bg-green-500 text-white p-2 rounded-lg flex w-full gap-2 pt-7 grow-0 shrink-0 aspect-[1/1] object-cover rounded-[50%] w-10 grow mt-0 pt-0 shrink"
+          >
+          </div>
+        </div>
+        <Komentar slug={url} client:only />
+      </div>
+    </div>
+    <div class="col-span-10 sm:col-span-3">
+      <div class="sticky top-20">
+        {
+          semuanya.map((x) => (
+            <a href={`/post/${x.slug}`} class="flex gap-3 mb-4">
+              <img
+                class="rounded-lg object-cover aspect-video w-45"
+                src={x.gambar}
+                alt={`Gambar dari ${x.title}`}
+              />
+              <p class="text-sm">{x.title}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Base>

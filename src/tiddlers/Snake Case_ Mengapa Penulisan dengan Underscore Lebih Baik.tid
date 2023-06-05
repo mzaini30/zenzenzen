@@ -1,0 +1,65 @@
+created: 20230605145458941
+gambar: /gambar-untuk-postingan/pexels-lukas-574071.jpg
+kategori: Pemrograman
+modified: 20230605202001287
+published_date: 20230606042001286
+ringkasan: Mana yang lebih kamu suka? Snake Case atau Camel Case?
+tags: Published
+title: Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik
+type: text/vnd.tiddlywiki
+
+Ada banyak hal yang ''nggak penting'' di dalam dunia pemrograman. Misalnya aja membandingkan antar bahasa pemrograman 🤔, membandingkan antar framework 🤨, atau bahkan membandingkan antar editor 🙄. Tapi ada satu hal yang menurut saya "nggak penting" tapi tetap penting, yaitu penulisan kode. 😉
+
+Jadi, sekarang kita akan membahas tentang Snake Case. 🐍
+
+Snake Case itu seperti ini: snake_case 🐍
+
+Selain Snake Case, ada juga Camel Case. Camel Case itu seperti ini: camelCase 🐫. Lalu, ada juga Kebab Case. Contohnya: kebab-case.
+
+Kalau untuk menuliskan variabel di bahasa pemrograman, pilihannya hanya ada dua, yaitu snake_case dan camelCase.
+
+Kalau kita menggunakan JavaScript, biasanya yang digunakan itu adalah camelCase. Sedangkan, kalau menggunakan Python, yang biasa dipakai adalah snake_case. Tapi, kali ini, aku akan menunjukkan kelebihan dari snake_case. 😎
+
+!! Mengapa Pemilihan Gaya Penulisan Kode Penting? 🤔
+
+Pemilihan gaya penulisan kode menjadi penting karena akan membuat kita nyaman dengan pekerjaan kita sebagai developer. Itulah mengapa dalam menuliskan variabel, kita sebaiknya tidak menyingkat-nyingkatnya sebagaimana yang pernah kita pelajari dulu. Misalnya aja, untuk looping, kita dulu belajarnya adalah menggunakan variabel i. Padahal, kalau nama variabel nggak jelas, kita jadi bingung dengan fungsi variabel tersebut. Akankah lebih baik, jika untuk looping, menggunakan variabel index? Jadi, kita bisa tahu bahwa variabel tersebut digunakan untuk menampung index dari looping. 😌
+
+Begitu juga untuk menghubungkan dua kata pada satu variabel. Contohnya: kunci utama. Kita bisa menggunakan gaya snake_case seperti kunci_utama maupun camelCase seperti kunciUtama. Nah, di sini sudah mulai terlihat, mana nama variabel yang lebih nyaman di mata. 😎
+
+!! Snake Case akan Membuat Kode Menjadi Lebih Jelas 🐍
+
+Contohnya seperti kode berikut:
+
+```javascript
+let dataBukuYangMauDiambil = await fetch(
+  "https://www.googleapis.com/books/v1/volumes?q=isbn:9786020306229"
+);
+let dataBuku = await dataBukuYangMauDiambil.json();
+console.log(dataBuku);
+```
+
+Itu menggunakan camelCase.
+
+Sekarang, bandingkan jika kita menggunakan snake_case:
+
+```javascript
+let data_buku_yang_mau_diambil = await fetch(
+  "https://www.googleapis.com/books/v1/volumes?q=isbn:9786020306229"
+);
+let data_buku = await data_buku_yang_mau_diambil.json();
+console.log(data_buku);
+```
+
+Lebih jelas kode yang menggunakan snake_case kan?
+
+!! Snake Case Memudahkan dalam Kolaborasi
+
+Terkadang, untuk membuat satu aplikasi, tidak hanya satu developer yang bekerja. Akan tetapi, bisa dua, tiga, atau banyak developer yang bekerja membangun satu aplikasi bersama-sama. Nah, dengan menggunakan snake_case, kita bisa lebih mudah dalam kolaborasi. Karena, kita bisa lebih mudah dalam membaca kode yang ditulis oleh developer lain. 🤝
+
+Begitu pula dengan kode yang kita ketik akan lebih mudah juga dibaca oleh developer lain sehingga bisa mengurangi kemungkinan munculnya bug yang banyak. 🐛🔍
+
+Jadi, ayo kita mulai ngoding dengan menggunakan snake_case. Jangan lupa, selalu gunakan gaya penulisan kode yang nyaman di mata. Jangan lupa juga, selalu gunakan gaya penulisan kode yang mudah dibaca oleh developer lain. 👨‍💻💡
+
+!! Credit
+
+Photo by Lukas: https://www.pexels.com/photo/person-encoding-in-laptop-574071/

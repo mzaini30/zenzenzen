@@ -1,0 +1,39 @@
+created: 20230604224133601
+gambar: https://user-images.githubusercontent.com/7939342/231507922-a0daa08d-98d5-4fd9-8fdd-2dcf613ddfb0.jpg
+kategori: Pemrograman
+modified: 20230605142249091
+published_date: 2023060522224991
+ringkasan: Kadang, kita perlu CLI daripada GUI untuk cepat mengedit video
+tags: Published
+title: Cara Cepat Edit Video Pakai Coding
+type: text/vnd.tiddlywiki
+
+Biasanya kan kalau untuk mengedit video, kita biasanya menggunakan After Effect, Filmora, Premier, bahkan aplikasi yang sederhana seperti CapCut. 😊
+
+Tapi, kadang, kita perlu CLI aja untuk mengedit video dengan cepat. Contohnya aja untuk dua task yang biasa kupakai: mencerminkan video dan memotong video. 🤔💭💻
+
+Kenapa aku hanya perlu dua ini? Soalnya, aku biasanya kan mengupload kajian ke YouTube yang sumbernya itu dari Instagram. Jadi, ketika kajian, dia live di Instagram, kemudian disimpan ke feed. Kemudian dari feed, didownload dengan savefrom.net lalu dicerminkan karena posisi kiri dan kanan itu terbalik kalau di Instagram. Setelah dicerminkan, kupotong deh awal dan akhir. Soalnya, aku biasanya memulai live Instagram itu sebelum mulai kajian. Jadi, nggak buru-buru gitu. Lalu, di bagian akhir, HPnya nggak langsung kuambil. Tapi, kubiarkan sampai sepi dulu, baru kuambil deh. 😎📱💻
+
+Aplikasi CLI yang kita gunakan kali ini adalah ffmpeg. Monggo didownload di Google. 🌐💻
+
+Setelah install ffmpeg, sekarang atur Environment System (PATH) sehingga kita bisa memanggil ffmpeg di mana aja. Tentang cara setting PATH di Windows, monggo bisa ditanakan ke ChatGPT. 💻📝
+
+Nah, sekarang kita mulai untuk mencerminkan. Kodenya adalah:
+
+```bash
+ffmpeg -i sumber.mp4 -vf "hflip" dicerminkan.mp4
+```
+
+Setelah dicerminkan, kita potong awal dan akhir:
+
+```bash
+ffmpeg -i dicerminkan.mp4 -ss 00:01:05 -t 01:00:02 hasil.mp4
+```
+
+Jadi, yang diambil itu adalah detik ke 00:01:05 hingga 01:00:02. 👍📹
+
+Simpel. Cepat prosesnya. Habis itu, tinggal upload ke YouTube. 🚀📤
+
+!! Credit
+
+Photo by Sora Shimazaki: https://www.pexels.com/photo/unrecognizable-hacker-with-smartphone-typing-on-laptop-at-desk-5935791/

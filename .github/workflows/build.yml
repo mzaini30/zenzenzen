@@ -1,42 +1,38 @@
-name: build
+name: Deploy
+
 on:
-  # schedule:
-  #   - cron: 0 0/4 * * *
   push:
     branches:
       - master
+
 jobs:
-  scheduled:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
         with:
-          node-version: 16
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
+          submodules: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          version: 7
-          run_install: false
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+          node-version: "16.12.x"
+
+      - name: Cache dependencies Node
+        uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - name: Install dependencies
-        run: pnpm i
-      - name: Build
-        run: pnpm build
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm i
+
+      - name: Generate
+        run: npm run build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
