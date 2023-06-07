@@ -30,13 +30,13 @@ const filteredData = data
 ---
 
 <HalamanAwal link_aktif="kategori" judul="Kategori">
-  <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div class="grid grid-cols-1 sm:(grid-cols-3 gap-4) lg:grid-cols-4 ">
     {
       filteredData.map((x) => (
         <a href={`/kategori/${x.kategori.replaceAll(" ", "--")}`}>
-          <div class="relative rounded-xl overflow-hidden">
+          <div class="relative sm:rounded-xl overflow-hidden">
             <img
-              class="aspect-[304/171] object-cover"
+              class="aspect-[304/171] w-full object-cover"
               src={x.gambar}
               loading="lazy"
               alt={`Gambar ${x.kategori}`}
@@ -45,7 +45,7 @@ const filteredData = data
               {x.banyak} artikel
             </div>
           </div>
-          <p class="pt-3 pb-5">{x.kategori}</p>
+          <p class="sm:(pt-3 pb-5 px-0) p-5">{x.kategori}</p>
         </a>
       ))
     }
