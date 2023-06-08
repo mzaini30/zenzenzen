@@ -1,0 +1,34 @@
+created: 20230608054808927
+modified: 20230608060852130
+tags: 
+title: Pembayaran Menggunakan Crypto
+type: text/vnd.tiddlywiki
+
+Untuk pembayaran menggunakan crypto, bisa menggunakan salah satu dari koin-koin berikut:
+
+!! Bitcoin
+
+Biaya transfer: Sekitar Rp 51.660
+
+"""
+Alamat:
+bc1qennmmlckzlrptv7wj45zky92upcnuk9qnt08r6
+"""
+
+!! Ethereum
+
+Biaya transfer: Sekitar Rp 63.760
+
+"""
+Alamat:
+0xA54BcD0a40F065F9C009D8ED3f7f48967e4cbBD2
+"""
+
+!! Algorand
+
+Biaya transfer: Sekitar Rp 21
+
+"""
+Alamat:
+GUOEGGJKVROVI5FDGGI6DTVPHV4T62DK3GEGGKL64NBMIRGCR42GX5SWHU
+"""
