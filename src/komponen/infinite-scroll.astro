@@ -1,0 +1,10 @@
+<script is:inline src="/vendor/unpkg.com_infinite-scroll@4.0.1_dist_infinite-scroll.pkgd.min.js"></script>
+<script is:inline>
+    let elem = document.querySelector('.wadah-postingan');
+let infScroll = new InfiniteScroll( elem, {
+  // options
+  path: '.tombol-selanjutnya',
+  append: '.postingan',
+  history: false,
+});
+</script>

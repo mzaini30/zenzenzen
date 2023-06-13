@@ -2,6 +2,7 @@
 import HalamanAwal from "../layout/halaman-awal.astro";
 import semuaPostingan from "../data/semua-postingan";
 import konfigurasi from "../konfigurasi.yml";
+import TampilIklan from '../komponen/tampil-iklan.astro'
 
 let kategori = [];
 
@@ -49,5 +50,6 @@ const filteredData = data
         </a>
       ))
     }
+    <TampilIklan></TampilIklan>
   </div>
 </HalamanAwal>

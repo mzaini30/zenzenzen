@@ -1,0 +1,11 @@
+---
+import {acak} from "kumpulan-tools"
+
+let data = await fetch('https://raw.githubusercontent.com/mzaini30/shopee/master/data.json')
+data = await data.json()
+data = acak(data)[0]
+---
+
+<a class='postingan' href={data.link} target='_blank'>
+    <img src={data.gambar} class="sm:rounded-xl w-full aspect-[304/171] object-cover" alt="Iklan Shopee">
+</a>

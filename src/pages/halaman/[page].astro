@@ -1,0 +1,50 @@
+---
+
+
+import HalamanAwal from "../../layout/halaman-awal.astro";
+import semuaPostingan from "../../data/semua-postingan";
+import konfigurasi from "../../konfigurasi.yml";
+import Iklan from "../komponen/iklan.svelte";
+import InfiniteScroll from "../../komponen/infinite-scroll.astro"
+import TampilIklan from '../../komponen/tampil-iklan.astro'
+
+export async function getStaticPaths({ paginate }) {
+  return paginate(semuaPostingan(), { pageSize: 11 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+
+const totalItems = semuaPostingan().length; // Total jumlah item
+const itemsPerPage = 11; // Jumlah item per halaman
+const currentPage = +page.currentPage; // Halaman saat ini
+
+const totalPages = Math.ceil(totalItems / itemsPerPage); // Jumlah total halaman
+
+const hasNextPage = currentPage < totalPages; // Mengecek apakah ada halaman berikutnya
+
+
+---
+
+<HalamanAwal link_aktif="beranda" judul={konfigurasi.judul}>
+    <div class="wadah-postingan grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4">
+        {
+            page.data
+                
+                .map((x) => (
+                    <a class='postingan' href={`/post/${x.slug}`}>
+                        <img
+                            class="sm:rounded-xl w-full aspect-[304/171] object-cover"
+                            src={x.gambar}
+                            loading="lazy"
+                            alt={`Gambar ${x.title}`}
+                        />
+                        <p class="p-5 sm:px-0 sm:pt-3 sm:pb-5">{x.title}</p>
+                    </a>
+                ))
+        }
+        <TampilIklan></TampilIklan>
+        {hasNextPage ? <a href={"/halaman/" + (+page.currentPage + 1)} class='tombol-selanjutnya underline uppercase text-sm text-center block mt-3'>Selanjutnya &rarr;</a> : null}
+    </div>
+    
+    <InfiniteScroll></InfiniteScroll>
+</HalamanAwal>

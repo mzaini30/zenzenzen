@@ -3,6 +3,7 @@ import semuaPostingan from "../../data/semua-postingan";
 import Base from "../../layout/base.astro";
 import Header from "../../komponen/header.astro";
 import { acak } from "kumpulan-tools";
+import TampilIklan from '../../komponen/tampil-iklan.astro'
 
 export function getStaticPaths() {
   const data = semuaPostingan();
@@ -63,6 +64,7 @@ const gambar = artikelnya[0].gambar;
           </a>
         ))
       }
+      <TampilIklan></TampilIklan>
     </div>
   </div>
 </Base>
