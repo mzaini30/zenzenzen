@@ -41,7 +41,9 @@ const hasNextPage = currentPage < totalPages; // Mengecek apakah ada halaman ber
                     </a>
                 ))
         }
+        <div class="mb-10">
         <TampilIklan></TampilIklan>
+    </div>
         {hasNextPage ? <a href={"/halaman/" + (+page.currentPage + 1)} class='tombol-selanjutnya underline uppercase text-sm text-center block mt-3'>Selanjutnya &rarr;</a> : null}
     </div>
     
