@@ -9,13 +9,13 @@ import InfiniteScroll from "../../komponen/infinite-scroll.astro"
 import TampilIklan from '../../komponen/tampil-iklan.astro'
 
 export async function getStaticPaths({ paginate }) {
-  return paginate(semuaPostingan(), { pageSize: 11 });
+  return paginate(semuaPostingan(), { pageSize: 24 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
 
 const totalItems = semuaPostingan().length; // Total jumlah item
-const itemsPerPage = 11; // Jumlah item per halaman
+const itemsPerPage = 24; // Jumlah item per halaman
 const currentPage = +page.currentPage; // Halaman saat ini
 
 const totalPages = Math.ceil(totalItems / itemsPerPage); // Jumlah total halaman
@@ -41,11 +41,7 @@ const hasNextPage = currentPage < totalPages; // Mengecek apakah ada halaman ber
                     </a>
                 ))
         }
-        <div class="mb-10">
-        <TampilIklan></TampilIklan>
-    </div>
         {hasNextPage ? <a href={"/halaman/" + (+page.currentPage + 1)} class='tombol-selanjutnya underline uppercase text-sm text-center block mt-3'>Selanjutnya &rarr;</a> : null}
     </div>
     
-    <InfiniteScroll></InfiniteScroll>
 </HalamanAwal>
