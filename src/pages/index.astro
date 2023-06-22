@@ -10,7 +10,7 @@ import TampilIklan from '../komponen/tampil-iklan.astro'
 <HalamanAwal link_aktif="beranda" judul={konfigurasi.judul}>
     <div class="wadah-postingan grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4">
         {
-            semuaPostingan()
+            semuaPostingan().slice(0, 24)
                 .map((x) => (
                     <a class='postingan' href={`/post/${x.slug}`}>
                         <img
@@ -25,6 +25,7 @@ import TampilIklan from '../komponen/tampil-iklan.astro'
                     </a>
                 ))
         }
-       <a href="/halaman/2" class='tombol-selanjutnya absolute -left-9999 -top-99999 underline uppercase text-sm text-center block mt-3'>Selanjutnya &rarr;</a>
+       
     </div>
+    <a href="/halaman/2" class='tombol-selanjutnya  underline uppercase text-sm text-center block mt-3'>Selanjutnya &rarr;</a>
 </HalamanAwal>

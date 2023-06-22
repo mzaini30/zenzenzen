@@ -6,6 +6,8 @@ import { acak } from "kumpulan-tools";
 import Giscus from "../../komponen/giscus.astro";
 import Komentar from "../../komponen/komentar.svelte";
 import TampilIklan from '../../komponen/tampil-iklan.astro'
+import iklan from '../../gambar/Jasa perbaikan website.png'
+import iklan_mobile from '../../gambar/Jasa perbaikan website mobile.png'
 
 let url = Astro.url;
 
@@ -44,6 +46,8 @@ semuanya = acak(semuanya);
           >
           </div>
         </div>
+        <img src={iklan} alt="Iklan jasa perbaikan website" class='sm:block hidden w-full mb-5'>
+        <img src={iklan_mobile} alt="Iklan jasa perbaikan website" class='sm:hidden block w-full mb-5'>
         <Komentar slug={url} client:only />
       </div>
     </div>
