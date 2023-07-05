@@ -1,12 +1,16 @@
 created: 20230705001125656
-modified: 20230705001917954
-tags: 
+gambar: https://i2.wp.com/nairametrics.com/wp-content/uploads/2019/03/Cryptocurrency.jpeg?fit=900%2C563&ssl=1
+kategori: Keuangan
+modified: 20230705004840896
+published_date: 20230705084840893
+ringkasan: Panduan ringkas dan tuntas tentang cara trading crypto
+tags: Published
 title: Cara Trading Crypto dengan Santai
 type: text/vnd.tiddlywiki
 
 Mungkin yang akan aku tuliskan di sini bukan berasal dari pikiran pribadi, karena tentu saja aku masih terus belajar dan banyak mendapatkan ilmu dari mentor-mentor di YouTube seperti dari Bang Angga Andinata, Bang Rizki Aditama, Bang Timothy Ronald, Mbak Felicia, dan dari mentor-mentor lain di YouTube. Jadi, bisa saja artikel yang aku tuliskan di sini nggak cocok buat kamu, atau bisa aja cocok buat kamu. Yang jelas sih, kita terus saja berkembang dengan cara terus belajar.
 
-Jadi, kita mulai aja deh artikelnya. Semoga artikel ini bisa beramanfaat dan bis adipraktekkan sehari-hari.
+Jadi, kita mulai aja deh artikelnya. Semoga artikel ini bisa beramanfaat dan bisa dipraktekkan sehari-hari.
 
 !! Membangun Mindset
 
@@ -18,4 +22,54 @@ Maka, mindset yang baik dalam trading adalah:
 
 Nah, dengan mindset yang benar ini, kita jadi nggak terlalu mengejar kekayaan yang banyak dari trading. Nggak rakus gitu istilahnya. Jadi, ketika di satu strategi yang kita buat, hanya bisa mendapatkan 1%, kita nggak terlalu khawatir, karena nggak rakus dengan keuntungan yang banyak. Justru, kalau kita rakus, misalnya kita pasang take profit di 50%, padahal kalau kata strateginya, nggak bisa dapat segitu, jadinya malah ketika sudah mendekati 50%, langsung turun ke bawah. Kan, rugi.
 
-Habis tu, karena kita terlalu rakus juga, kita nggak 
+Habis tu, karena kita terlalu rakus juga, kita akhirnya nggak masang stop loss karena takut rugi. Akhirnya apa? Ya ternyata bisa saja terjadi tren bearish hingga akhirnya, aset yang kita miliki, harganya terus turun, hingga mau nggak mau, kita potong ketika sudah rugi banyak.
+
+!! Memilih Broker Crypto
+
+Ada beberapa broker yang sudah aku coba:
+
+# Ajaib Kripto
+# Indodax
+# Pluang
+
+Sebenarnya, ada broker lain juga yang sudah aku coba seperti Nanovest, Tokocrypto, Binance, dan OKX. Tapi, nggak kumasukkan ke list karena belum terlalu lama makainya sehingga belum bisa membuat reviewnya.
+
+Lalu, dari 3 broker ini, mana yang aku pakai? Aku pakai dua, yaitu Ajaib Kripto dan Pluang.
+
+Untuk trading sehari-hari, aku pakai Ajaib Kripto karena ada fitur Market Order/Limit Order dan Stop Loss/Take Profit. Sehingga, sejak awal sudah bisa aku tentukan di berapa persen aku akan mengambil Stop Loss dan Take Profit. Sehingga, ketika misalnya di malam hari, ketika aku sudah tidur, dan harga sudah menyentuh harga yang sudah direncanakan, maka secara otomatis dia akan menjual aset yang dimiliki.
+
+Sedangkan, Pluang aku pakai untuk withdraw. Soalnya, karena Ajaib Kripto ini menggunakan Bank BCA sebagai kustodi, maka aku nggak bisa withdraw di BCA karena potongannya yang lumayan besar. Nggak tau ya kenapa Bank BCA ini potongannya besar. Mungkin, pas waktu aku daftar, salah milih tipe rekening mungkin ya. Nah, jadi dari Ajaib Kripto ini, aku beli DOGE, kemudian DOGE yang dimiliki ini kukirim ke Pluang yang kemudian kucairkan dan diambil di Gopay.
+
+!! Money Management
+
+Contoh money management di sini adalah dari modal trading yang dimiliki, berapa banyak yang dihabiskan untuk trading. Kalau dari Bang Rizki Aditama, idealnya adalah 1%. Jadi, kalau misalnya kita punya uang 100 juta, maka di setiap kali trading itu, kita menghabiskan 1 juta. Nah, nggak 100 jutanya ditradingkan semua. 
+
+Jadi, kalau kita menentukan bahwa di setiap kali trading itu, kita ambil 1% dari modal, kita bisa trading setiap kali sampai 100 kali kena margin call atau 100 kali pending order. Kan, nggak mungkin ya hal itu terjadi? Paling parah ya 10 kali berturut-turut mengalami margin call. Makanya, money management ini penting banget supaya kita bisa trading setiap hari dengan rileks.
+
+!! Risk/Reward Ratio
+
+Untuk setiap kali trading, jangan lupa untuk memasang RR 1:2. Jadi, misalnya kita memasang Stop Loss pada 3%, maka Take Profit adalah 6%. Jadi, ketika satu kali kena Stop Loss dan satu kali kena Take Profit, kita tetap untung. Hitungannya kan seperti ini kalau satu kali Stop Loss dan satu kali Take Profit: -3% + 6% = 3%. Masih untung kan? Nggak langsung habis modalnya.
+
+Bahkan, bisa juga kalau kamu yakin dengan strategi yang digunakan atau yakin kalau lagi fase bullish, kamu bisa memasang RR 1:3.
+
+!! Membeli USDT di Ajaib Kripto
+
+Kalau di Ajabi Kripto kan, kita bisa menggunakan USDT atau IDR untuk trading. Kalau aku, lebih suka menggunakan USDT karena pair crypto dengan USDT ini harganya dan pergerakan harganya sama dengan yang di Binance. Maka, aku bisa menggunakan Trading View untuk mencoba berbagai indikator buat entry.
+
+Ini sangat menguntungkan banget karena ada banyak banget indikator di Trading View. Terutama indikator-indikator andalan seperti UT Alerts Bot dan Nadaraya Watson Envelope.
+
+!! Buat Live Trading di YouTube
+
+Dengan bermodalkan OBS aja, kita bisa sekalian live trading di YouTube. Siapa tau bisa menginspirasi teman-teman yang lain juga untuk melakukan trading.
+
+Kan siapa tau nanti ada yang nonton, terus bisa menghasilkan banyak subscriber di YouTube kita.
+
+!! Buat Jurnal Trading
+
+Untuk jurnal trading, simpel aja sih bentuknya. Contohnya seperti ini:
+
+| tanggal | coin | untung/rugi | total |
+| 1 Januari 2023 | BTC | 2% | 2% |
+| 2 Januari 2023 | AVAX | -1% | 1% |
+| 3 Januari 2023 | SHIB | 10% | 11% |
+| 4 Januari 2023 | BTC | -3% | 8% |
