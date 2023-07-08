@@ -20,6 +20,7 @@
     "kumpulan-tools": "^1.0.0",
     "only-toast": "^1.0.1",
     "prettier": "^2.8.8",
+    "stat-aja": "^1.0.0",
     "striptags": "^3.2.0",
     "svelte": "^3.54.0",
     "unocss": "^0.51.8",
