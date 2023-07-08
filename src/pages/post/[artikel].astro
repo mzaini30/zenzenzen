@@ -5,9 +5,10 @@ import Header from "../../komponen/header.astro";
 import { acak } from "kumpulan-tools";
 import Giscus from "../../komponen/giscus.astro";
 import Komentar from "../../komponen/komentar.svelte";
-import TampilIklan from '../../komponen/tampil-iklan.astro'
-import iklan from '../../gambar/Jasa perbaikan website.png'
-import iklan_mobile from '../../gambar/Jasa perbaikan website mobile.png'
+import TampilIklan from "../../komponen/tampil-iklan.astro";
+import iklan from "../../gambar/Jasa perbaikan website.png";
+import iklan_mobile from "../../gambar/Jasa perbaikan website mobile.png";
+import Statistik from "../../komponen/statistik.svelte";
 
 let url = Astro.url;
 
@@ -28,12 +29,19 @@ semuanya = acak(semuanya);
 ---
 
 <Base judul={title} gambar={gambar} deskripsi={ringkasan}>
+  <Statistik judul={title} client:only />
   <Header link_aktif="beranda" />
   <div class="border-b-2"></div>
   <div class="py-10 gap-5 grid sm:(w-700 max-w-[80%]) mx-auto grid-cols-10">
     <div class="col-span-10 sm:col-span-7">
-      <img class="w-full h-auto -mt-10 sm:(mt-0 mx-auto)" src={gambar} alt="Cover artikel" />
-      <div class="prose mx-auto  sm:(w-full max-w-full) w-700 max-w-[80%] [&_a]:text-blue-700 [&_.tc-tiddlylink-missing]:(no-underline text-inherit)">
+      <img
+        class="w-full h-auto -mt-10 sm:(mt-0 mx-auto)"
+        src={gambar}
+        alt="Cover artikel"
+      />
+      <div
+        class="prose mx-auto sm:(w-full max-w-full) w-700 max-w-[80%] [&_a]:text-blue-700 [&_.tc-tiddlylink-missing]:(no-underline text-inherit)"
+      >
         <h1>{title}</h1>
         <Fragment
           set:html={text
@@ -46,14 +54,21 @@ semuanya = acak(semuanya);
           >
           </div>
         </div>
-        <img src={iklan} alt="Iklan jasa perbaikan website" class='sm:block hidden w-full mb-5'>
-        <img src={iklan_mobile} alt="Iklan jasa perbaikan website" class='sm:hidden block w-full mb-5'>
+        <img
+          src={iklan}
+          alt="Iklan jasa perbaikan website"
+          class="sm:block hidden w-full mb-5"
+        />
+        <img
+          src={iklan_mobile}
+          alt="Iklan jasa perbaikan website"
+          class="sm:hidden block w-full mb-5"
+        />
         <Komentar slug={url} client:only />
       </div>
     </div>
-    <div class="col-span-10 sm:col-span-3 mx-auto  sm:w-full w-700 max-w-[80%] ">
+    <div class="col-span-10 sm:col-span-3 mx-auto sm:w-full w-700 max-w-[80%]">
       <div class="sticky top-20">
-        
         {
           semuanya.map((x) => (
             <a href={`/post/${x.slug}`} class="flex gap-3 mb-4">
@@ -69,16 +84,16 @@ semuanya = acak(semuanya);
       </div>
     </div>
   </div>
-  <div class='bg-slate-700 p-10'>
+  <div class="bg-slate-700 p-10">
     <a href="https://brtnetwork.id"
-    ><img
-      src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"
-      alt="Logo Komunitas BRT Network"
-      title="Komunitas BRT Network"
-      width="1000"
-      height="724"
-      class='h-auto w-[200px]'
-    /></a
-  >
+      ><img
+        src="https://brtnetwork.id/wp-content/uploads/2023/03/logo-BRTNetwork.webp"
+        alt="Logo Komunitas BRT Network"
+        title="Komunitas BRT Network"
+        width="1000"
+        height="724"
+        class="h-auto w-[200px]"
+      /></a
+    >
   </div>
 </Base>
