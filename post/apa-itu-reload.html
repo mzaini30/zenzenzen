@@ -37,6 +37,7 @@
 </script></head>
     <body>
         
+  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let h={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,e)=>{if(t===""||!Array.isArray(e))return e;let[r,n]=e;return r in h?h[r](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var o;if(!this.hydrator||!this.isConnected)return;let e=(o=this.parentElement)==null?void 0:o.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},c=this.querySelectorAll("template[data-astro-template]");for(let s of c){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("name")||"default"]=s.innerHTML)}let l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{};await this.hydrator(this)(this.Component,l,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,r)=>{r.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let n=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),o=this.getAttribute("component-export")||"default";if(!o.includes("."))this.Component=c[o];else{this.Component=c;for(let s of o.split("."))this.Component=this.Component[s]}return this.hydrator=l,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="ep9VA" component-url="/_astro/statistik.fdf889ec.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;judul&quot;:[0,&quot;Anti Reload dengan Svelte&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Statistik&quot;,&quot;value&quot;:true}"></astro-island>
   <img src="https://4.bp.blogspot.com/-62ypPmNMeAk/U7rilAe6wgI/AAAAAAAADyg/VGYCY6b5og0/s1600/doraemon-images.jpg" class="w-full aspect-[1663/269] object-cover" alt="Gambar cover">
 <div class="py-10 mx-auto w-350 max-w-[80%] sm:flex gap-10 items-center">
   <a href="/">
@@ -60,7 +61,7 @@
   <div class="py-10 gap-5 grid sm:w-700 sm:max-w-[80%] mx-auto grid-cols-10">
     <div class="col-span-10 sm:col-span-7">
       <img class="w-full h-auto -mt-10 sm:mt-0 sm:mx-auto" src="/gambar-untuk-postingan/pexels-alex-knight-2599244.jpg" alt="Cover artikel">
-      <div class="prose mx-auto  sm:w-full sm:max-w-full w-700 max-w-[80%] [&_a]:text-blue-700 [&_.tc-tiddlylink-missing]:no-underline [&_.tc-tiddlylink-missing]:text-inherit">
+      <div class="prose mx-auto sm:w-full sm:max-w-full w-700 max-w-[80%] [&_a]:text-blue-700 [&_.tc-tiddlylink-missing]:no-underline [&_.tc-tiddlylink-missing]:text-inherit">
         <h1>Anti Reload dengan Svelte</h1>
         <p>Pernahkah kamu berpikir 🤔: Apakah reload di suatu website itu bisa dihilangkan?</p><p>Maksudku reload di sini adalah ketika kamu mengklik suatu link, apa yang terjadi? Yap, dia akan loading lagi untuk memuat halaman berikutnya. Hal ini terasa sangat lambat. Bisa nggak ya, pengalaman yang menjengkelkan ini dihilangkan? Jadi, pengennya tu nggak usah pakai loading-loadingan. Langsung tampil aja gitu halaman webnya pas kita klik suatu link?</p><p>Yap, tentu saja bisa! Contohnya adalah blog ini. Coba deh kamu klik salah satu link ke postingan lainnya, tentunya isinya akan langsung tampil dan nggak pakai loading.</p><p>Kok bisa?</p><p>Di sini, aku menggunakan <a class="tc-tiddlylink tc-tiddlylink-missing" href="./sveltekit">SvelteKit</a> sebagai pondasi menyusun blog ini. Cara membuat link juga sama seperti HTML pada umumnya: 😉</p><p><code>+page.svelte</code>:</p><pre class="hljs"><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/postingan/ini-adalah-postingan&quot;</span>&gt;</span>Ini adalah postingan<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre><p><code>postingan/ini-adalah-postingan/+page.svelte</code>:</p><pre class="hljs"><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Ini adalah postingan<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre><p>Keren kan?</p><h2 class="">Apa Itu <a class="tc-tiddlylink tc-tiddlylink-missing" href="./sveltekit">SvelteKit</a>?</h2><p>Jadi, <a class="tc-tiddlylink tc-tiddlylink-missing" href="./sveltekit">SvelteKit</a> adalah framework dari Svelte. Sedangkan, Svelte adalah framework <a class="tc-tiddlylink tc-tiddlylink-missing" href="./javascript">JavaScript</a> yang membantumu membuat website dengan cepat dan powerful. Salah satu kelebihan dari <a class="tc-tiddlylink tc-tiddlylink-missing" href="./sveltekit">SvelteKit</a> itu adalah routing. Jadi, kita bisa membuat halaman-halaman pada folder <code>src/routes/</code> yang kalau misalnya ada link di halaman tersebut yang menuju halaman lainnya, dia nggak pakai loading lagi, dan langsung muncul halaman berikutnya.</p><p>Fitur lainnya adalah kode-kodenya yang sama dengan HTML, CSS, dan <a class="tc-tiddlylink tc-tiddlylink-missing" href="./javascript">JavaScript</a> pada umumnya, berbeda dengan React yang full sintaksnya adalah <a class="tc-tiddlylink tc-tiddlylink-missing" href="./javascript">JavaScript</a> + XML. Contoh kode kalau di Svelte: 😎</p><pre class="hljs"><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
   <span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Svelte&quot;</span>;
@@ -90,51 +91,50 @@
         </div>
         <img src="/_astro/Jasa perbaikan website.2e5ae47b.png" alt="Iklan jasa perbaikan website" class="sm:block hidden w-full mb-5">
         <img src="/_astro/Jasa perbaikan website mobile.37ace6da.png" alt="Iklan jasa perbaikan website" class="sm:hidden block w-full mb-5">
-        <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let h={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,e)=>{if(t===""||!Array.isArray(e))return e;let[s,n]=e;return s in h?h[s](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var i;if(!this.hydrator||!this.isConnected)return;let e=(i=this.parentElement)==null?void 0:i.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let s=this.querySelectorAll("astro-slot"),n={},c=this.querySelectorAll("template[data-astro-template]");for(let r of c){let o=r.closest(this.tagName);!o||!o.isSameNode(this)||(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of s){let o=r.closest(this.tagName);!o||!o.isSameNode(this)||(n[r.getAttribute("name")||"default"]=r.innerHTML)}let l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{};await this.hydrator(this)(this.Component,l,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,s)=>{s.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),s=this.getAttribute("client");if(Astro[s]===void 0){window.addEventListener(`astro:${s}`,()=>this.start(),{once:!0});return}Astro[s](async()=>{let n=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=c[i];else{this.Component=c;for(let r of i.split("."))this.Component=this.Component[r]}return this.hydrator=l,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="RdkcX" component-url="/_astro/komentar.02e9378c.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;slug&quot;:[7,&quot;https://zenzen.web.id/post/apa-itu-reload.html&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Komentar&quot;,&quot;value&quot;:true}"></astro-island>
+        <astro-island uid="RdkcX" component-url="/_astro/komentar.367e0641.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;slug&quot;:[7,&quot;https://zenzen.web.id/post/apa-itu-reload.html&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Komentar&quot;,&quot;value&quot;:true}"></astro-island>
       </div>
     </div>
-    <div class="col-span-10 sm:col-span-3 mx-auto  sm:w-full w-700 max-w-[80%] ">
+    <div class="col-span-10 sm:col-span-3 mx-auto sm:w-full w-700 max-w-[80%]">
       <div class="sticky top-20">
-        
-        <a href="/post/privacy-policy-untuk-chrome-extension" class="flex gap-3 mb-4">
+        <a href="/post/aplikasi-android-dari-html" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-pixabay-270404.jpg" alt="Gambar dari Kenapa Aku Membuat Aplikasi Android dari HTML?">
+              <p class="text-sm">Kenapa Aku Membuat Aplikasi Android dari HTML?</p>
+            </a><a href="/post/cara-mudah-mengenkripsi-file" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/229831220-2abf5179-0298-4a27-8ccb-602186135791.jpg" alt="Gambar dari Cara Mudah Mengenkripsi File">
+              <p class="text-sm">Cara Mudah Mengenkripsi File</p>
+            </a><a href="/post/blogger-musnah-gara-gara-chatgpt" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/229812893-6999ed5d-992b-4e58-a6b9-4d55aed1f89e.jpg" alt="Gambar dari Blogger Musnah Gara-Gara ChatGPT!">
+              <p class="text-sm">Blogger Musnah Gara-Gara ChatGPT!</p>
+            </a><a href="/post/privacy-policy" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-pixabay-164425.jpg" alt="Gambar dari Privacy Policy">
+              <p class="text-sm">Privacy Policy</p>
+            </a><a href="/post/snake-case-mengapa-penulisan-dengan-underscore-lebih-baik" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-lukas-574071.jpg" alt="Gambar dari Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik">
+              <p class="text-sm">Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik</p>
+            </a><a href="/post/how-to-set-up-prettier-for-astro-project" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-s-migaj-1009136.jpg" alt="Gambar dari How to Set Up Prettier for Astro Project">
+              <p class="text-sm">How to Set Up Prettier for Astro Project</p>
+            </a><a href="/post/privacy-policy-untuk-chrome-extension" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/06/Chrome-phone.jpg" alt="Gambar dari Privacy Policy untuk Chrome Extension">
               <p class="text-sm">Privacy Policy untuk Chrome Extension</p>
             </a><a href="/post/indihome-mengantongi-gelar-pria-award" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/WhatsApp-Image-2023-03-25-at-11.16.04.jpeg" alt="Gambar dari Luar Biasa! IndiHome Sukses Meraih 10 Gelar PRIA Award!">
               <p class="text-sm">Luar Biasa! IndiHome Sukses Meraih 10 Gelar PRIA Award!</p>
-            </a><a href="/post/how-to-set-up-prettier-for-astro-project" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-s-migaj-1009136.jpg" alt="Gambar dari How to Set Up Prettier for Astro Project">
-              <p class="text-sm">How to Set Up Prettier for Astro Project</p>
-            </a><a href="/post/aplikasi-android-dari-html" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-pixabay-270404.jpg" alt="Gambar dari Kenapa Aku Membuat Aplikasi Android dari HTML?">
-              <p class="text-sm">Kenapa Aku Membuat Aplikasi Android dari HTML?</p>
-            </a><a href="/post/tools-menulis-skrip-film" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/230343122-abea8078-7288-459c-9dd6-d3b27c21e135.jpg" alt="Gambar dari Tools Menulis Skrip Film: Manfaat dan Tools Rekomendasinya">
-              <p class="text-sm">Tools Menulis Skrip Film: Manfaat dan Tools Rekomendasinya</p>
-            </a><a href="/post/blogger-musnah-gara-gara-chatgpt" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/229812893-6999ed5d-992b-4e58-a6b9-4d55aed1f89e.jpg" alt="Gambar dari Blogger Musnah Gara-Gara ChatGPT!">
-              <p class="text-sm">Blogger Musnah Gara-Gara ChatGPT!</p>
-            </a><a href="/post/apa-itu-reload" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-alex-knight-2599244.jpg" alt="Gambar dari Anti Reload dengan Svelte">
-              <p class="text-sm">Anti Reload dengan Svelte</p>
             </a><a href="/post/component-based-pada-svelte" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-cottonbro-studio-5474028.jpg" alt="Gambar dari Component Based pada Svelte">
               <p class="text-sm">Component Based pada Svelte</p>
-            </a><a href="/post/snake-case-mengapa-penulisan-dengan-underscore-lebih-baik" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-lukas-574071.jpg" alt="Gambar dari Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik">
-              <p class="text-sm">Snake Case: Mengapa Penulisan dengan Underscore Lebih Baik</p>
-            </a><a href="/post/cara-cepat-edit-video-pakai-coding" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/231507922-a0daa08d-98d5-4fd9-8fdd-2dcf613ddfb0.jpg" alt="Gambar dari Cara Cepat Edit Video Pakai Coding">
-              <p class="text-sm">Cara Cepat Edit Video Pakai Coding</p>
             </a><a href="/post/buat-apa-sih-aku-membuat-addons-firefox" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-stas-knop-2916450.jpg" alt="Gambar dari Buat Apa Sih Aku Membuat Addons Firefox?">
               <p class="text-sm">Buat Apa Sih Aku Membuat Addons Firefox?</p>
-            </a><a href="/post/privacy-policy" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-pixabay-164425.jpg" alt="Gambar dari Privacy Policy">
-              <p class="text-sm">Privacy Policy</p>
-            </a><a href="/post/cara-mudah-mengenkripsi-file" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/229831220-2abf5179-0298-4a27-8ccb-602186135791.jpg" alt="Gambar dari Cara Mudah Mengenkripsi File">
-              <p class="text-sm">Cara Mudah Mengenkripsi File</p>
+            </a><a href="/post/tools-menulis-skrip-film" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/230343122-abea8078-7288-459c-9dd6-d3b27c21e135.jpg" alt="Gambar dari Tools Menulis Skrip Film: Manfaat dan Tools Rekomendasinya">
+              <p class="text-sm">Tools Menulis Skrip Film: Manfaat dan Tools Rekomendasinya</p>
+            </a><a href="/post/apa-itu-reload" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-alex-knight-2599244.jpg" alt="Gambar dari Anti Reload dengan Svelte">
+              <p class="text-sm">Anti Reload dengan Svelte</p>
+            </a><a href="/post/cara-cepat-edit-video-pakai-coding" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/231507922-a0daa08d-98d5-4fd9-8fdd-2dcf613ddfb0.jpg" alt="Gambar dari Cara Cepat Edit Video Pakai Coding">
+              <p class="text-sm">Cara Cepat Edit Video Pakai Coding</p>
             </a><a href="/post/biaya-jasa-zen" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-sora-shimazaki-5926389.jpg" alt="Gambar dari Biaya Jasa Zen">
               <p class="text-sm">Biaya Jasa Zen</p>
