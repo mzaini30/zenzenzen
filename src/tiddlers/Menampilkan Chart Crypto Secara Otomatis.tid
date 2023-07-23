@@ -1,0 +1,19 @@
+created: 20230723213609875
+modified: 20230723214401288
+tags: 
+title: Menampilkan Chart Crypto Secara Otomatis
+type: text/vnd.tiddlywiki
+
+Salah satu kendala saat ingin trading crypto adalah kita harus membuka chartnya terlebih dahulu, kemudian menganalisanya, baru kita bisa menentukan crypto mana yang akan kita beli sesuai dengan analisa kita. Nah, kadang proses ini cukup membuat malas karena ada banya coin crypto yang harus ktia amati untuk bisa menentukan coin mana yang bagus untuk kita entry saat ini. Contohnya aja, ada 85 coin crypto yang harus aku analisa satu per satu sebelum bisa menentukan coin yang akan dibeli.
+
+[img[https://imgur.com/7rayyKr.png]]
+
+Oleh karena itu, aku membuat bot yang akan jalan setiap 15 menit. Nah, isi dari bot itu adalah setiap 15 menit akan terbuka tab baru yang merupakan chart dari salah satu coin crypto yang berada dalam listku tersebut secara acak.
+
+[img[https://imgur.com/MbP2PqO.png]]
+
+Ini kode botnya:
+
+[img[https://imgur.com/jDiVYVM.png]]
+
+Ini link workflownya jika ingin menggunakannya: https://www.automa.site/workflow/MVaR-27PdYBfUcdmjPr-n
