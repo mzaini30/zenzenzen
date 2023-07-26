@@ -3,5 +3,5 @@
 
   import stat_aja from 'stat-aja'
 
-  stat_aja({judul, tipe: 'Blog Zen Zen'})
+  stat_aja({judul, tipe: 'Tulisan'})
 </script>
