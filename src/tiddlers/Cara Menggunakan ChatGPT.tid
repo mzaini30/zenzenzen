@@ -1,12 +1,15 @@
 created: 20230809035533259
-modified: 20230809040924544
-tags: 
+modified: 20230809094447264
+published_date: 20230809174447264
+tags: Published
 title: Cara Menggunakan ChatGPT
 type: text/vnd.tiddlywiki
 
 ChatGPT adalah tools kecerdasan buatan (AI) yang lagi rame saat ini. Apalagi, sekarang sudah ada ChatGPT versi 4. Tentu, kita tak ingin melewatkan kesempatan ini sehingga tidak menggunakannya dong. Makanya, ini adalah cara menggunakan ChatGPT.
 
 Untuk menggunakan ChatGPT, pastikan kamu memiliki email yang aktif dana nomor HP yang aktif. Soalnya, nanti digunakan untuk membuat akun ChatGPT.
+
+!! Daftar ChatGPT
 
 Jadi, pertama buka dulu https://chat.openai.com/ kemudian klik Sign Up:
 
@@ -20,6 +23,8 @@ Di bagian itu, klik aja Continue with Google. Jadi, memang harus sudah ada akun 
 
 Kalau sudah mendaftar, kita bisa langsung menggunakan ChatGPT....
 
+!! Bagian-Bagian ChatGPT
+
 Tampilannya ChatGPT itu seperti ini:
 
 [img[tampilan chat gpt.png]]
@@ -31,3 +36,35 @@ Yang pertama itu bagian history:
 [img[history chat gpt.png]]
 
 Jadi, di bagian history ini, semua chat kita dengan ChatGPT, akan secara otomatis tersimpan.
+
+Lalu, ini adalah bagian kita mengetikkan chat, sama dengan yang di WA:
+
+[img[seperti di wa image.png]]
+
+Ini adalah bagian chattingnya:
+
+[img[isinya.... image.png]]
+
+Jadi, bagaimana cara menggunakannya? 
+
+!! Cara Menggunakannya
+
+Cukup mudah sih. Sama seperti kita chatting di aplikasi perpesanan seperti WhatsApp maupun Telegram.
+
+Misalnya, kita tanya ni ke ChatGPT:
+
+> Apa yang dimaksud dengan bilangan euler?
+
+Maka, ChatGPT akan menjawabnya:
+
+[img[bilangan euler image.png]]
+
+Kemudian, bisa aku tanya lagi:
+
+> Gimana? Aku belum paham. Kalau pi kan jelas ya: 3.14 karena di SD sudah diajarkan. Tapi, bilangan euler ini kan nggak pernah diajarkan bahkan di SMA
+
+Lalu, ChatGPT akan menjawabnya:
+
+[img[penjelasan euler image.png]]
+
+Lihat, dia akan berusaha menjelaskannya... Keren... 👍
