@@ -2,17 +2,17 @@
 import HalamanAwal from "../layout/halaman-awal.astro";
 import semuaPostingan from "../data/semua-postingan";
 import konfigurasi from "../konfigurasi.yml";
-import TampilIklan from '../komponen/tampil-iklan.astro'
+import TampilIklan from "../komponen/tampil-iklan.astro";
 
 let kategori = [];
 
 for (let x of semuaPostingan()) {
-  if (x.kategori != konfigurasi.default.kategori && x.kategori != "pinned") {
-    kategori.push({
-      gambar: x.gambar,
-      kategori: x.kategori,
-    });
-  }
+  // if (x.kategori != konfigurasi.default.kategori && x.kategori != "pinned") {
+  kategori.push({
+    gambar: x.gambar,
+    kategori: x.kategori,
+  });
+  // }
 }
 
 const data = [...kategori];
@@ -31,7 +31,7 @@ const filteredData = data
 ---
 
 <HalamanAwal link_aktif="kategori" judul="Kategori">
-  <div class="grid grid-cols-1 sm:(grid-cols-3 gap-4) lg:grid-cols-4 ">
+  <div class="grid grid-cols-1 sm:(grid-cols-3 gap-4) lg:grid-cols-4">
     {
       filteredData.map((x) => (
         <a href={`/kategori/${x.kategori.replaceAll(" ", "--")}`}>
