@@ -37,7 +37,7 @@
 </script></head>
     <body>
         
-  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let p={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[s,i]=r;return s in p?p[s](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var o;if(!this.hydrator||!this.isConnected)return;let r=(o=this.parentElement)==null?void 0:o.closest("astro-island[ssr]");if(r){r.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let s=this.querySelectorAll("astro-slot"),i={},c=this.querySelectorAll("template[data-astro-template]");for(let e of c){let n=e.closest(this.tagName);n!=null&&n.isSameNode(this)&&(i[e.getAttribute("data-astro-template")||"default"]=e.innerHTML,e.remove())}for(let e of s){let n=e.closest(this.tagName);n!=null&&n.isSameNode(this)&&(i[e.getAttribute("name")||"default"]=e.innerHTML)}let l;try{l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{}}catch(e){let n=this.getAttribute("component-url")||"<unknown>",h=this.getAttribute("component-export");throw h&&(n+=` (export ${h})`),console.error(`[hydrate] Error parsing props for component ${n}`,this.getAttribute("props"),e),e}await this.hydrator(this)(this.Component,l,i,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,s)=>{s.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),s=this.getAttribute("client");if(Astro[s]===void 0){window.addEventListener(`astro:${s}`,()=>this.start(),{once:!0});return}Astro[s](async()=>{let i=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),i?import(i):()=>()=>{}]),o=this.getAttribute("component-export")||"default";if(!o.includes("."))this.Component=c[o];else{this.Component=c;for(let e of o.split("."))this.Component=this.Component[e]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="Z1XXOer" component-url="/_astro/statistik.0c645fa4.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;judul&quot;:[0,&quot;Membeli Jutaan Crypto Secara Otomatis&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Statistik&quot;,&quot;value&quot;:true}"></astro-island>
+  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var d;{let p={0:t=>u(t),1:t=>l(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(l(t)),5:t=>new Set(l(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},h=t=>{let[e,n]=t;return e in p?p[e](n):void 0},l=t=>t.map(h),u=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,h(n)]));customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var i;if(!this.hydrator||!this.isConnected)return;let e=(i=this.parentElement)==null?void 0:i.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),o={},a=this.querySelectorAll("template[data-astro-template]");for(let r of a){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of n){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(o[r.getAttribute("name")||"default"]=r.innerHTML)}let c;try{c=this.hasAttribute("props")?u(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}await this.hydrator(this)(this.Component,c,o,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,n)=>{n.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}Astro[n](async()=>{let o=this.getAttribute("renderer-url"),[a,{default:c}]=await Promise.all([import(this.getAttribute("component-url")),o?import(o):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(let r of i.split("."))this.Component=this.Component[r]}return this.hydrator=c,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="Z1XXOer" component-url="/_astro/statistik.0c645fa4.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;judul&quot;:[0,&quot;Membeli Jutaan Crypto Secara Otomatis&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Statistik&quot;,&quot;value&quot;:true}"></astro-island>
   <img src="https://4.bp.blogspot.com/-62ypPmNMeAk/U7rilAe6wgI/AAAAAAAADyg/VGYCY6b5og0/s1600/doraemon-images.jpg" class="w-full aspect-[1663/269] object-cover" alt="Gambar cover">
 <div class="py-10 mx-auto w-350 max-w-[80%] sm:flex gap-10 items-center">
   <a href="/">
@@ -72,47 +72,47 @@
           <div class="flex w-full gap-2 aspect-[1/1] object-cover rounded-[50%] w-10 border-b-2 w-full border-b-black focus:no-outline justify-between flex pt-3 inline-block focus:bg-white focus:text-black focus:border-black focus:border hover:bg-white hover:text-black hover:border-black hover:border text-white bg-black rounded-lg p-2 px-4 text-sm w-full bg-green-500 text-white p-2 rounded-lg flex w-full gap-2 pt-7 grow-0 shrink-0 aspect-[1/1] object-cover rounded-[50%] w-10 grow mt-0 pt-0 shrink">
           </div>
         </div>
-        <astro-island uid="Z1NC46U" component-url="/_astro/komentar.a4db0053.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;slug&quot;:[7,&quot;https://zenzen.web.id/post/membeli-jutaan-crypto-secara-otomatis.html&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Komentar&quot;,&quot;value&quot;:true}"></astro-island>
+        <astro-island uid="Z1NC46U" component-url="/_astro/komentar.75785344.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;slug&quot;:[7,&quot;https://zenzen.web.id/post/membeli-jutaan-crypto-secara-otomatis.html&quot;]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Komentar&quot;,&quot;value&quot;:true}"></astro-island>
       </div>
     </div>
     <div class="col-span-10 sm:col-span-3 mx-auto sm:w-full w-700 max-w-[80%]">
       <div class="sticky top-20">
-        <a href="/post/cara-tepat-investasi" class="flex gap-3 mb-4">
+        <a href="/post/cara-cepat-kaya-dari-online" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-karolina-grabowska-4386431.jpg" alt="Gambar dari Cara Cepat Kaya dari Online">
+              <p class="text-sm">Cara Cepat Kaya dari Online</p>
+            </a><a href="/post/menggandakan-uang-secara-otomatis" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/234123966-2b0cbc88-c410-42e7-b20d-b01d2616ded8.jpg" alt="Gambar dari Menggandakan Uang Secara Otomatis">
+              <p class="text-sm">Menggandakan Uang Secara Otomatis</p>
+            </a><a href="/post/cara-tepat-investasi" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-lukas-590011.jpg" alt="Gambar dari Cara Tepat Investasi">
               <p class="text-sm">Cara Tepat Investasi</p>
-            </a><a href="/post/menampilkan-chart-crypto-secara-otomatis" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://www.topicsupply.com/wp-content/uploads/2016/12/Online-Trading.jpg" alt="Gambar dari Menampilkan Chart Crypto Secara Otomatis">
-              <p class="text-sm">Menampilkan Chart Crypto Secara Otomatis</p>
+            </a><a href="/post/ngapain-mantengin-chart-crypto" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-burak-the-weekender-186464.jpg" alt="Gambar dari Ngapain Mantengin Chart Crypto?">
+              <p class="text-sm">Ngapain Mantengin Chart Crypto?</p>
+            </a><a href="/post/membeli-jutaan-crypto-secara-otomatis" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/230806509-44b899ae-27d7-48e1-847c-712bb80634cc.jpg" alt="Gambar dari Membeli Jutaan Crypto Secara Otomatis">
+              <p class="text-sm">Membeli Jutaan Crypto Secara Otomatis</p>
             </a><a href="/post/strategi-investasi-crypto" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-rodnae-productions-8369648.jpg" alt="Gambar dari Strategi Investasi Crypto">
               <p class="text-sm">Strategi Investasi Crypto</p>
+            </a><a href="/post/menampilkan-chart-crypto-secara-otomatis" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="https://www.topicsupply.com/wp-content/uploads/2016/12/Online-Trading.jpg" alt="Gambar dari Menampilkan Chart Crypto Secara Otomatis">
+              <p class="text-sm">Menampilkan Chart Crypto Secara Otomatis</p>
+            </a><a href="/post/membeli-crypto-dengan-melihat-momen" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-rodnae-productions-8370752.jpg" alt="Gambar dari Membeli Crypto dengan Melihat Momen">
+              <p class="text-sm">Membeli Crypto dengan Melihat Momen</p>
+            </a><a href="/post/dompet-crypto-mengapa-kamu-perlu-mempunyai-satu" class="flex gap-3 mb-4">
+              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-david-mcbee-730564.jpg" alt="Gambar dari Dompet Crypto: Mengapa Kamu Perlu Mempunyai Satu?">
+              <p class="text-sm">Dompet Crypto: Mengapa Kamu Perlu Mempunyai Satu?</p>
             </a><a href="/post/berinvestasi-tu-seperti-investor-emas" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-solodsha-8105116.jpg" alt="Gambar dari Berinvestasi tu Seperti Investor Emas">
               <p class="text-sm">Berinvestasi tu Seperti Investor Emas</p>
             </a><a href="/post/berapa-sih-biaya-transaksi-crypto" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-evgeny-tchebotarev-2187304.jpg" alt="Gambar dari Berapa Sih Biaya Transaksi Crypto?">
               <p class="text-sm">Berapa Sih Biaya Transaksi Crypto?</p>
-            </a><a href="/post/membeli-crypto-dengan-melihat-momen" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-rodnae-productions-8370752.jpg" alt="Gambar dari Membeli Crypto dengan Melihat Momen">
-              <p class="text-sm">Membeli Crypto dengan Melihat Momen</p>
-            </a><a href="/post/menggandakan-uang-secara-otomatis" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/234123966-2b0cbc88-c410-42e7-b20d-b01d2616ded8.jpg" alt="Gambar dari Menggandakan Uang Secara Otomatis">
-              <p class="text-sm">Menggandakan Uang Secara Otomatis</p>
-            </a><a href="/post/ngapain-mantengin-chart-crypto" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-burak-the-weekender-186464.jpg" alt="Gambar dari Ngapain Mantengin Chart Crypto?">
-              <p class="text-sm">Ngapain Mantengin Chart Crypto?</p>
-            </a><a href="/post/cara-cepat-kaya-dari-online" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-karolina-grabowska-4386431.jpg" alt="Gambar dari Cara Cepat Kaya dari Online">
-              <p class="text-sm">Cara Cepat Kaya dari Online</p>
             </a><a href="/post/cara-trading-crypto-dengan-santai" class="flex gap-3 mb-4">
               <img class="rounded-lg object-cover aspect-video w-45" src="https://i2.wp.com/nairametrics.com/wp-content/uploads/2019/03/Cryptocurrency.jpeg?fit=900%2C563&#38;ssl=1" alt="Gambar dari Cara Trading Crypto dengan Santai">
               <p class="text-sm">Cara Trading Crypto dengan Santai</p>
-            </a><a href="/post/dompet-crypto-mengapa-kamu-perlu-mempunyai-satu" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="/gambar-untuk-postingan/pexels-david-mcbee-730564.jpg" alt="Gambar dari Dompet Crypto: Mengapa Kamu Perlu Mempunyai Satu?">
-              <p class="text-sm">Dompet Crypto: Mengapa Kamu Perlu Mempunyai Satu?</p>
-            </a><a href="/post/membeli-jutaan-crypto-secara-otomatis" class="flex gap-3 mb-4">
-              <img class="rounded-lg object-cover aspect-video w-45" src="https://user-images.githubusercontent.com/7939342/230806509-44b899ae-27d7-48e1-847c-712bb80634cc.jpg" alt="Gambar dari Membeli Jutaan Crypto Secara Otomatis">
-              <p class="text-sm">Membeli Jutaan Crypto Secara Otomatis</p>
             </a>
       </div>
     </div>
