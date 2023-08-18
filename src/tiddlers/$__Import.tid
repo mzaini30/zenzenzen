@@ -4,6 +4,4 @@ type: text/vnd.tiddlywiki
 
 The following tiddlers were imported:
 
-# [[$:/plugins/OokTech/WordCount]]
-# [[$:/pluginlibrary/OokTech/OokTechPlugins]]
-# [[$:/plugins/OokTech/WordCount/readme]]
+# [[$:/plugins/tiddlywiki/markdown]]

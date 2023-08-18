@@ -1,0 +1,1 @@
+**tebal** _miring_
