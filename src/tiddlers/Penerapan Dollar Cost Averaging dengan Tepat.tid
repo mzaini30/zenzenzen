@@ -1,0 +1,31 @@
+created: 20230901011816696
+gambar: https://m.foolcdn.com/media/dubs/images/dollar-cost-averaging-infographic.width-880.png
+kategori: Keuangan
+modified: 20230901015900692
+published_date: 20230901095900691
+ringkasan: Persiapan sebelum Dollar Cost Averaging
+tags: Published
+title: Penerapan Dollar Cost Averaging dengan Tepat
+type: text/vnd.tiddlywiki
+
+Dollar Cost Averaging adalah metode membeli suatu aset investasi tertentu dengan cara menyicil. Hal ini digunakan pada aset-aset yang memiliki volatilitas yang tinggi; kadang naik tinggi, kadang turun tinggi. Contohnya aja saham dan crypto.
+
+Kerap kali orang-orang sembarangan dalam memilih aset yang ingin dicicilnya. Jadinya, malah unrealized untung ruginya minus terus. Makanya, kita perlu memiliki strategi supaya nggak minus hasil yang didapatkan.
+
+Salah satu strateginya adalah seperti ini:
+
+[img[cocos image.png]]
+
+Di sini, aku menggunakan rincian sebagai berikut:
+
+# Timeframe 1 hari (karena kita akan DCA setiap harinya)
+# Menggunakan candle Heikin Ashi (supaya bisa melihat pergerakan naik turun secara garis besarnya)
+# Menggunakan Moving Average 30 (karena kita ingin melihat rata-rata pembelian 30 hari sejak 30 hari yang lalu hingga hari ini)
+# Memastikan bahwa candle baru saja menembus Moving Average dan berwarna hijau (artinya, ada kemungkinan bullish)
+
+Memang sekilas terlihat seperti trading pada umumnya, menggunakan strategi dan indikator. Tapi, apa yang membedakan? Bedanya adalah ketika kita sudah menemukan aset yang tepat untuk diinvestasikan, kita cicil tiap hari. Misalnya, tiap hari 100 ribu. Begitu seterusnya hingga mengalami kenaikan harga (unrealized profit loss warna hijau).
+
+Intinya adalah dua hal:
+
+# Analisa seperti trading
+# Cicil
